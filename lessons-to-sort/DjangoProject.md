@@ -11,7 +11,7 @@ Create a form to save student info.
 **3. Teacher Registration Form**
 Create a form to save Teachers info.
 
-**4. Curriculam of Academy**
+**4. Curriculum of Academy**
 Description about Lesson plan/curriculum.
 
 **5. Career**
