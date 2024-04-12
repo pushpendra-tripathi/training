@@ -1,19 +1,4 @@
-# Subject: Linux
-## Topic: File System
-## Module: 
-### Goal
-Perform common file and directory operations in a Linux environment, including navigating directories, creating and editing files, listing files based on specific criteria, creating and managing directories, copying and moving files, changing file permissions, searching for files based on content, removing files and directories, and renaming files. Additionally, understand how to use the ps command to list running processes on the system.
-### Reading 
-### Assignment
-1. Navigate to the "Documents" directory and create a new file named "notes.txt." and write “important” in it.
-2. List all files in the "Downloads" directory that have a ".pdf" extension.
-3. Create a new directory called "backup" inside the "Documents" directory.
-4. Copy the file "notes.txt" from the "Documents" to the "backup" directory.
-5. Change the permissions of the file "notes.txt" to allow read and write for the owner.
-6. Search for all files in the home directory that contain the word "important" in their content.
-7. Remove the directory "backup" and its contents from the Documents.
-8. Display a list of running processes on your system using the ps command.
-9. Rename the file "notes.txt" to "new_notes.txt" in the Documents.
+
 
 [GitHub](#GitHub)
 
@@ -137,20 +122,24 @@ Follow the steps in the section to set up your GitHub for the course of the trai
 ***
 
 1. Go to github.com
-2. Create a new repo called <your-github-id>.github.io. Review https://docs.github.com/en/pages/quickstart for additional help and instructions.
-3. Clone the repo on your local machine
-4. Add _config.yml and update it per https://docs.github.com/en/pages/quickstart#changing-the-title-and-description. 
+2. Create a new repo called e9<firstname_initial><lastname>.github.io
+
+    Eg: e9sgupta.github.io
+
+   Review https://docs.github.com/en/pages/quickstart#creating-your-website for additional help and instructions.
+4. Clone the repo on your local machine
+5. Add _config.yml and update it per https://docs.github.com/en/pages/quickstart#changing-the-title-and-description. 
     - The title should be "<first_name> <last_name> | 1E9 Advisors"
     - The description can be whatever you want. It has to be work appropriate.
-5. Add a file called README.md
-6. Create a directory called journal
-7. Add one file for each day of training. Call the file day_n.md. n must be a 0 padded 3 digit string. 
+6. Add a file called README.md
+7. Create a directory called journal
+8. Add one file for each day of training. Call the file day_n.md. n must be a 0 padded 3 digit string. 
     - Day 1 will become day_001.md. 
     - Day 2 will become day_002.md. 
     - Day 34 will become day_034.md.
     - etc.
-8. Write 5 things you learned on each day in the appropriate file. The 5 things each day must be unique, and cannot be a repetition of any of the days prior to it.
-9. Commit the README.md file and journal directory with all the day_00n.md files in it.
+9. Write 5 things you learned on each day in the appropriate file. The 5 things each day must be unique, and cannot be a repetition of any of the days prior to it.
+10. Commit the README.md file and journal directory with all the day_00n.md files in it.
 
 
     ## Advanced Template for Math Homework
