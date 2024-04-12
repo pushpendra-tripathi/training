@@ -1,4 +1,29 @@
 # Subject: Linux
+
+## Topic: File System
+
+## Module: 
+
+### Goal
+
+Perform common file and directory operations in a Linux environment, including navigating directories, creating and editing files, listing files based on specific criteria, creating and managing directories, copying and moving files, changing file permissions, searching for files based on content, removing files and directories, and renaming files. Additionally, understand how to use the ps command to list running processes on the system.
+
+### Reading 
+
+### Assignment
+
+1. Navigate to the "Documents" directory and create a new file named "notes.txt." and write “important” in it.
+2. List all files in the "Downloads" directory that have a ".pdf" extension.
+3. Create a new directory called "backup" inside the "Documents" directory.
+4. Copy the file "notes.txt" from the "Documents" to the "backup" directory.
+5. Change the permissions of the file "notes.txt" to allow read and write for the owner.
+6. Search for all files in the home directory that contain the word "important" in their content.
+7. Remove the directory "backup" and its contents from the Documents.
+8. Display a list of running processes on your system using the ps command.
+9. Rename the file "notes.txt" to "new_notes.txt" in the Documents.
+
+# Subject: Linux
+
 ## Topic: Commands: find, grep, ...
 
 ### Goal: 
@@ -11,14 +36,19 @@ The purpose of this lesson is to master essential Linux commands for efficient s
 [cat Command in linux](#Module-cat-Command-in-linux)
 
 # Subject: Linux
+
 ## Topic: Command, Shell Scripting
+
 ## Module: touch Command in Linux 
 
 ### Goal: 
+
 Understand the functionality and applications of the touch command in Linux, including its primary use for modifying file timestamps, creating files, handling multiple files, setting specific timestamps, and options to avoid creating new files.
 
 ### Reading 
+
 ### Description
+
 The touch command's primary function is to modify a timestamp. Commonly, the utility is used for file creation, although this is not its primary function. The terminal program can change the modification and access time for any given file. The touch command creates a file only if the file doesn't already exist.
 
 touch <options> <file or directory name>
@@ -45,20 +75,27 @@ Avoid creating a new file
 touch -c <filename>
 
 # Subject: Linux
+
 ## Topic: Command, Shell Scripting
+
 ## Module: cat Command in Linux
 
 ### Goal: 
+
 Master the application and syntax of the cat command in Linux, including its ability to concatenate or display files, understanding the various flags such as -n, -e, -t, and -v for controlling output format, and utilizing the command effectively for file manipulation tasks such as concatenation, displaying file contents, appending to files, and handling standard input/output.
 
 ### Reading 
+
 ### Purpose
+
 Concatenates or displays files.
 
 ### Syntax
+
 cat [ - q ] [  -r ] [ - s ] [ - S ] [ - u ][ - Z ] [ - n [ - b ] ] [ - v [ - e ] [ - t ] ] [  - | File ... ]
 
 ### Description
+
 The cat command reads each File parameter in sequence and writes it to standard output. If you do not specify a file name, the cat command reads from standard input. You can also specify a file name of - (dash) for standard input.
 
 Description
