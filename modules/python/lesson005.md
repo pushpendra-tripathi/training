@@ -2,7 +2,7 @@ Cohort Day:
 
 # Module: Python
 
-## Topic: Expressions
+## Subject: Expressions
 
 ### Goal: 
 This lesson will give you an overview of the different types of expressions in Python.
