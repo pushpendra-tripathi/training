@@ -7,7 +7,7 @@ Cohort Day:
 
 ## Module: 
 
-### Goal
+### Goal:
 
 Perform common file and directory operations in a Linux environment, including navigating directories, creating and editing files, listing files based on specific criteria, creating and managing directories, copying and moving files, changing file permissions, searching for files based on content, removing files and directories, and renaming files. Additionally, understand how to use the ps command to list running processes on the system.
 
