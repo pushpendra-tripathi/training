@@ -4,7 +4,7 @@ Cohort Day: 001
 ## Subject: Git and Github
 ## Topic : Introduction to Github
 
-## Goal:
+### Goal:
 By the end of this lesson, you will understand how to set up a repo, clone it to your local machine, use git to sync the two, committing and pushing changes, adding a README and basic git commands.
 
 
