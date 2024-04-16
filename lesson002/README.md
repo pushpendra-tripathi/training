@@ -1,8 +1,10 @@
-# Subject: Linux
+Cohort Day:
 
-## Topic: File System
+# Module: Linux
 
-## Module: 
+## Subject: File System
+
+## Topic: Navigating Directories
 
 ### Goal
 
