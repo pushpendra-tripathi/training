@@ -3,4 +3,9 @@ Cohort Day:
 # Module: Webstack
 
 ## Assessment
-he goal of this assessment is to test your knowledge of HTML and CSS.  
+The goal of this assessment is to test your knowledge of HTML and CSS.  \
+
+# make frontend of below page exactly as it is.
+
+<https://enine.school/>
+
