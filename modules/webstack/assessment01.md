@@ -5,7 +5,8 @@ Cohort Day:
 ## Assessment
 The goal of this assessment is to test your knowledge of HTML and CSS.  \
 
-# make frontend of below page exactly as it is.
+Instructions:
+Make frontend of below page exactly as it is.
 
 <https://enine.school/>
 
