@@ -4,8 +4,6 @@ Cohort Day:
 
 ## Subject: Commands in Linux
 
-# Subject: Linux
-
 ## Topic: Commands: find, grep, ...
 
 ### Goal: 
@@ -17,11 +15,8 @@ The purpose of this lesson is to master essential Linux commands for efficient s
 
 [cat Command in linux](#Module-cat-Command-in-linux)
 
-# Subject: Linux
 
-## Topic: Command, Shell Scripting
-
-## Module: touch Command in Linux 
+## Topic: touch Command in Linux 
 
 ### Goal: 
 
@@ -56,11 +51,8 @@ touch -m <filename>
 Avoid creating a new file
 touch -c <filename>
 
-# Subject: Linux
 
-## Topic: Command, Shell Scripting
-
-## Module: cat Command in Linux
+## Topic: cat Command in Linux
 
 ### Goal: 
 
