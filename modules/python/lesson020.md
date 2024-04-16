@@ -13,6 +13,7 @@ Cohort Day:
 
 4. Understanding the python requests library
    
+By the end of this lesson, you should be able to use the requests library. 
 
 ### Reading
  
