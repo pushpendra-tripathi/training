@@ -132,12 +132,3 @@ cat section3.1 - section3.3 >section3
 This command concatenates the file section3.1 with text from the keyboard (indicated by the minus sign), and the file section3.3, then directs the output into the file called section3.
 
 
-### Assignment
-
-1. Clone the repo on your local machine
-2. Edit assignment.py and add code to the empty functions
-   - random_name()
-   - random_age()
-   - getlist()
-3. getlist() should print the list of people in descending order of age
-
