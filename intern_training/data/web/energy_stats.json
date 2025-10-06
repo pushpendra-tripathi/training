@@ -1,0 +1,23 @@
+{
+    "daily_average": 49.8,
+    "top_spikes": [
+        {
+            "timestamp": "2025-09-30T17:00:00Z",
+            "price": 63.9
+        },
+        {
+            "timestamp": "2025-09-30T16:00:00Z",
+            "price": 60.2
+        },
+        {
+            "timestamp": "2025-09-30T07:00:00Z",
+            "price": 61.0
+        }
+    ],
+    "anomalies": [
+        {
+            "timestamp": "2025-09-30T06:00:00Z",
+            "price": 52.2
+        }
+    ]
+}

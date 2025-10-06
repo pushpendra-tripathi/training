@@ -1,0 +1,12 @@
+:root { --gap: 12px; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+body { margin: 0; background: #fafafa; color: #222; }
+header { display: flex; justify-content: space-between; align-items: center; padding: var(--gap) 16px; background: #fff; border-bottom: 1px solid #eee; }
+main { max-width: 900px; margin: 0 auto; padding: 16px; }
+#controls { display: flex; gap: var(--gap); margin-bottom: var(--gap); }
+.card { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 12px; margin-bottom: 8px; }
+#messages { min-height: 32px; margin-bottom: var(--gap); }
+.error { color: #b00020; }
+.success { color: #0a7a0a; }
+button { padding: 6px 10px; border: 1px solid #ddd; border-radius: 6px; background: #fff; cursor: pointer; }
+button:hover { background: #f2f2f2; }
+
