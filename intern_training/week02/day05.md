@@ -1,29 +1,28 @@
-## Week 2 · Day 5 — Templates, Validation, UX Polish
+## Week 2 · Day 5 — Refactor and Test Hard Cases
 
 ### Objectives
-- Use template inheritance, Django messages, and basic form validation.
+- Refactor for clarity/performance; add tests for edge cases and error paths.
 
 ### Tasks
-1) Templates
-   - Create `base.html` and extend it across pages.
-   - Add navigation and consistent layout.
-2) Validation and messages
-   - Add server-side validation; show success/error messages.
-3) Search/filter
-   - Implement simple title search and due_date filter on list view.
+1) Refactoring
+   - Apply early returns, extract small functions, and improve naming.
+2) Tests
+   - Add tests for malformed inputs, boundary values, and error handling.
+3) CI-like run
+   - Add `make test` and ensure clean runs from a fresh clone.
 
 ### Problem solving (45–60 min)
 - LeetCode: [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/), [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 
 ### Outcomes
-- A polished Django app with better UX and basic validation.
+- Cleaner code with stronger tests and confidence in edge cases.
 
 ### Deliverables
-- Screenshots and README notes on search and validation behavior.
+- Tests passing; README notes on refactors and tricky cases.
 
 ### Submission checklist
-- [ ] Base template and messages integrated
-- [ ] Validation errors displayed clearly
+- [ ] Tests cover edge and error cases
+- [ ] `make test` works
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
 
 

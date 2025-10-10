@@ -1,75 +1,162 @@
-## Week 5 (Bonus) — Fullstack Integration: Django API + Frontend
-### Prerequisite (promotion from Week 4)
-- Proceed only if Week 4 promotion gate is met (templates DRY + list/search/pagination/sorting + admin action + tests passing).
+## Week 5 — Django Foundations
 
 ### Weekly learning goals
-- Build a small frontend that consumes your Django API.
-- Implement end-to-end flows: login, list, detail, create/update via API.
-- Keep backend code clean with local `black`, `isort`, and `pylint`.
+- Set up Django project structure and understand the framework architecture
+- Master models and ORM: queries, relationships, migrations
+- Build views (FBVs and CBVs) and URL routing
+- Create templates with inheritance and Django template language
+- Implement forms and validation
+- Customize Django admin for productivity
+- Write tests for models and views
 
 ### Daily schedule
 
-#### Day 1 (Mon): Frontend scaffold + API consumption
+#### Day 1 (Mon): Project Setup + Models & ORM
 - Topics
-  - Static site scaffold (HTML/CSS/JS), fetch API basics, error handling.
+  - Django project vs. app structure
+  - Settings configuration, SECRET_KEY, DATABASES
+  - Models: fields, relationships (ForeignKey, ManyToMany)
+  - Migrations: makemigrations, migrate, showmigrations
+  - QuerySets: filter, get, all, order_by
 - Hands-on
-  - Start from `frontend_template/` and wire a page that fetches `/api/tasks/` and renders a list.
-  - Add a simple filter UI (status) and client-side pagination.
-- Problem solving (45–60 min)
-  - From LeetCode: [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (revisit with stack variations)
-  - From Euler: [Problem 7](https://projecteuler.net/problem=7)
-- Deliverables
-  - Static page showing tasks from your local API, with loading/error states.
-
-#### Day 2 (Tue): Auth integration and secure calls
-- Topics
-  - Session auth vs token auth in a simple local setup; CSRF for POST/PUT/DELETE.
-- Hands-on
-  - Implement login/logout UI and ensure API calls include CSRF token where needed.
-  - Restrict display to user-owned tasks; show a friendly message when unauthenticated.
+  - Create `tasktracker` project and `tasks` app
+  - Define `Task` model with title, description, status, due_date, created_at
+  - Create and run migrations
+  - Django shell: practice QuerySet operations
+  - Solve 3-4 model problems from ProblemBank_Django.md
 - Problem solving
-  - From LeetCode: [Detect Capital](https://leetcode.com/problems/detect-capital/), [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+  - Core: Blog Post model, Custom model manager
+  - Stretch: Model with choices, Many-to-Many relationship
 - Deliverables
-  - Authenticated fetch flow; protected actions require login.
+  - Project structure created; models defined; migrations working; QuerySet practice documented
 
-#### Day 3 (Wed): Create/Update flows and form UX
+#### Day 2 (Tue): Views & URL Routing
 - Topics
-  - Frontend forms, client-side validation, handling server validation errors.
+  - Function-Based Views (FBVs) vs. Class-Based Views (CBVs)
+  - URL patterns, path(), include(), URL parameters
+  - ListView, DetailView, CreateView, UpdateView, DeleteView
+  - Request/Response cycle
+  - Context data and template rendering
 - Hands-on
-  - Add a Create Task form and an Edit flow (modal or separate page) calling the API.
-  - Show field-level errors returned by the API.
+  - Implement CRUD views for Task model
+  - URL routing with named patterns
+  - Solve 3-4 view problems from ProblemBank_Django.md
 - Problem solving
-  - From LeetCode: [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/), Euler: [Problem 8](https://projecteuler.net/problem=8)
+  - Core: FBV List, CBV ListView, Detail View with slug
+  - Stretch: Create View with validation, Update and Delete Views
 - Deliverables
-  - Create/Update forms working against the API; clear success/error states.
+  - CRUD views working; URLs configured; named patterns used; reverse() working
 
-#### Day 4 (Thu): UI polish and state management
+#### Day 3 (Wed): Templates & Django Template Language
 - Topics
-  - Organizing JS modules, minimal state management, UX improvements (loading skeletons, toasts).
+  - Template inheritance: base.html, blocks, extends
+  - Template includes and partials
+  - Template tags: {% url %}, {% static %}, {% csrf_token %}
+  - Template filters: date, truncatechars, custom filters
+  - Context processors
 - Hands-on
-  - Add filtering, sorting, and improved empty-state UX.
-  - Refactor JS into modules: `api.js`, `state.js`, `ui.js`.
+  - Create base template with navigation
+  - Build list and detail templates
+  - Add template includes for reusable components
+  - Solve 2-3 template problems from ProblemBank_Django.md
 - Problem solving
-  - From LeetCode: [3Sum](https://leetcode.com/problems/3sum/), [LRU Cache](https://leetcode.com/problems/lru-cache/)
+  - Core: Template inheritance system, Custom template tags
+  - Stretch: Template with context processors
 - Deliverables
-  - Cleaner structure and noticeably improved UX.
+  - Template system working; base + extends pattern; partials extracted; custom filter added
 
-#### Day 5 (Fri): E2E sanity and docs
+#### Day 4 (Thu): Forms & Validation + Admin
 - Topics
-  - Manual E2E test plan, documenting API usage from the frontend.
+  - ModelForm: Meta class, fields, widgets
+  - Form validation: clean methods, field validators
+  - Messages framework: success/error messages
+  - Admin: ModelAdmin, list_display, list_filter, search_fields
+  - Admin actions and customization
 - Hands-on
-  - Create a short checklist to verify login → list → create → edit → logout flows.
-  - Document setup steps for both backend and frontend.
+  - Create ModelForm for Task
+  - Add custom validation (e.g., due_date in future)
+  - Configure admin with filters and search
+  - Add custom admin action (bulk status change)
+  - Solve 3-4 form/admin problems from ProblemBank_Django.md
 - Problem solving
-  - From LeetCode: [Coin Change](https://leetcode.com/problems/coin-change/)
+  - Core: ModelForm with custom validation, Form with multiple models
+  - Stretch: Custom admin configuration, Inline admin
 - Deliverables
-  - README section: “How to run the fullstack demo”; screenshots or GIF.
+  - Forms working with validation; messages displaying; admin configured and useful
 
-### Weekend assignment — Fullstack mini demo
-- Build a small front-end page for task details with a comments section (read-only or simple create), backed by a new `/api/tasks/<id>/comments/` endpoint.
-- Include loading, error, and empty states; document how to run both backend and frontend.
-- Ensure backend code passes `black`, `isort`, `pylint` locally.
+#### Day 5 (Fri): Testing Django Applications
+- Topics
+  - Django TestCase vs. pytest-django
+  - Testing models, views, forms
+  - Test client: GET, POST requests
+  - Fixtures and setUpTestData
+  - Testing templates and context
+- Hands-on
+  - Write tests for Task model
+  - Write tests for CRUD views
+  - Write tests for form validation
+  - Solve 2-3 testing problems from ProblemBank_Django.md
+- Problem solving
+  - Core: Model tests, View tests, Form tests
+  - Stretch: Integration test full CRUD flow
+- Deliverables
+  - Test suite covering models, views, forms; tests passing; coverage >80%
 
-### Quality reminders (daily)
-- Before submitting each day: run `black .`, `isort .`, and `pylint **/*.py` on backend code.
+### Weekend assignment
+**Task Tracker CRUD Application**
+
+Build a production-quality Django CRUD app:
+
+1. **Models**:
+   - Task model with validations
+   - At least one related model (e.g., Category, Tag)
+   - Custom manager for published/archived tasks
+2. **Views**:
+   - Full CRUD using CBVs
+   - List with pagination (10 per page)
+   - Search by title
+   - Filter by status
+3. **Templates**:
+   - Base template with navigation
+   - List, detail, create, update, delete templates
+   - Partials for task cards
+   - Messages framework integrated
+4. **Forms**:
+   - ModelForm with custom validation
+   - Clear error display
+5. **Admin**:
+   - Configured with list_display, filters, search
+   - At least one custom admin action
+6. **Tests**:
+   - Model tests (creation, methods, managers)
+   - View tests (list, detail, create, update, delete)
+   - Form tests (valid/invalid data)
+   - Coverage >80%
+7. **Documentation**:
+   - README with setup instructions
+   - Screenshots of key pages
+   - Model diagram
+
+**Acceptance criteria:**
+- All CRUD operations functional
+- 15+ Django problems solved from ProblemBank
+- Forms validate correctly with clear errors
+- Admin is useful and customized
+- Test suite passes with >80% coverage
+- Code quality tools pass
+- README is clear and complete
+
+### Suggested problems (15-20 total for the week)
+- See `intern_training/ProblemBank_Django.md` - focus on models, views, forms, templates, admin sections
+- Daily quota: 3-4 problems (focus on understanding Django patterns)
+
+### Promotion gate (advance to Week 6 if all met)
+- CRUD application functional and tested
+- 15+ Django problems solved
+- Forms and validation working correctly
+- Admin customized and productive
+- Test coverage >80%
+- Weekend assignment complete with all criteria
+- Quality gates pass
+
 

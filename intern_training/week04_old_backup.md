@@ -1,9 +1,8 @@
 ## Week 4 — Testing + Data Engineering
 
 ### Weekly learning goals
-- **Understand database fundamentals**: SQL, normalization, constraints, indexes, transactions
 - Master pytest: fixtures, parametrization, mocking, property-based testing
-- Build robust data validation and ETL pipelines loading to databases
+- Build robust data validation and ETL pipelines
 - Develop CLI tools with professional-grade UX
 - Understand HTTP/REST and consume APIs with Python
 - Apply TDD mindset to data processing workflows
@@ -26,28 +25,22 @@
 - Deliverables
   - Comprehensive test suite with >90% coverage; fixtures documented
 
-#### Day 2 (Tue): Database Fundamentals + Data Validation
+#### Day 2 (Tue): Data Validation & ETL Pipelines
 - Topics
-  - **SQL basics**: CREATE, INSERT, SELECT, UPDATE, DELETE, JOIN
-  - **Database design**: Normalization (1NF, 2NF, 3NF), constraints (PK, FK, UNIQUE, NOT NULL)
-  - **Indexes**: When and why to use them, performance impact
-  - **Transactions**: ACID properties, BEGIN, COMMIT, ROLLBACK
-  - **Python sqlite3**: Connections, cursors, parameterized queries (prevent SQL injection)
   - Schema validation for CSV/JSON
+  - Error collection (don't fail on first error)
   - Data transformation patterns
-  - Pipeline design: Extract → Transform → Load (to database)
+  - Pipeline design: Extract → Transform → Load
 - Hands-on
-  - Create database schema with constraints and indexes
-  - Implement CRUD operations with parameterized queries
   - Build validation module with clear error messages
-  - Implement ETL pipeline loading to SQLite with transactions
+  - Implement ETL pipeline for energy data
   - Solve 3-4 data handling problems from ProblemBank_DataHandling.md
 - Problem solving
-  - Core: Database schema with constraints, CSV validation, JSON schema validation
-  - Stretch: ETL Pipeline loading to database with transactions
-  - Challenge: Transaction rollback on validation errors
+  - Core: CSV validation, JSON schema validation
+  - Stretch: ETL Pipeline with error handling
+  - Challenge: Data deduplication with fuzzy matching
 - Deliverables
-  - Database schema with constraints and indexes; validation module with tests; ETL pipeline loading to SQLite
+  - Validation module with tests; ETL pipeline working with comprehensive error handling
 
 #### Day 3 (Wed): CLI Tools with argparse
 - Topics

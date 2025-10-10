@@ -1,10 +1,11 @@
-## Week 1 — Linux, Git, Python Basics, Shell, Problem Solving
+## Week 1 — Systems + Python Essentials + Tooling
 
 ### Weekly learning goals
 - Navigate Linux CLI confidently; write simple shell scripts.
 - Understand Git branching and open clean PRs.
-- Master Python basics: data types, control flow, functions, modules, typing mindset.
+- Master Python basics: data types, control flow, functions, modules, and a typing mindset.
 - Build habits in problem solving (daily practice) and writing small, testable scripts.
+- Adopt local quality tools: `black`, `isort`, `pylint`.
 
 ### Daily schedule
 
@@ -25,7 +26,7 @@
   - Numbers, strings, lists, tuples, dicts, sets; slicing; mutability; truthiness.
   - Functions, arguments, return values; modules and imports; standard library tour.
 - Hands-on
-  - Create `utils/` with `text.py` (cleaning, tokenizing) and `collections.py` (frequency map, de-duplication) with docstrings.
+  - Create `utils/` with `text.py` (cleaning, tokenizing) and `collections.py` (frequency map, de-duplication) with docstrings and type hints.
   - Configure `black`, `isort`, `pylint`; run them locally.
 - Problem solving
   - From LeetCode Easy: [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/), [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
@@ -60,7 +61,7 @@
 - Topics
   - Lists vs dicts vs sets; big-O intuition; sliding window and two-pointer patterns.
 - Hands-on
-  - Add unit tests for your helpers using `unittest` (standard lib) or `pytest` if preferred.
+  - Add unit tests for your helpers using `pytest` (or `unittest`).
   - Refactor functions for clarity and early returns; ensure linters pass.
 - Problem solving
   - From LeetCode Easy/Medium: [Binary Search](https://leetcode.com/problems/binary-search/), [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
@@ -74,6 +75,16 @@ Build the “Energy Insights” CLI as a small package that:
 - Includes `README.md` with install/run instructions and sample output.
 - Quality gate: must pass `black`, `isort`, `pylint` locally and be easy to run from a fresh clone.
 
+
+### Promotion gate (advance to Week 2 if all met)
+- CLI works on sample CSV with correct summaries.
+- Functions are typed; `black`/`isort`/`pylint` pass locally.
+- Daily problem-solving log updated.
+
 Suggested reference datasets: your own CSV or any public hourly/time-series sample.
+
+
+### Suggested problems (pick 3–5 per day)
+- See `intern_training/ProblemBank_Python.md` (25 problems with examples and complexity guidance)
 
 
