@@ -1,13 +1,117 @@
-## Intern Training Program (4 Weeks + Bonus Week 5)
+## Intern Training Program (6 Weeks: Fundamentals-First)
 
-This folder contains a complete, self-contained Django intern training package. It includes week-by-week lesson plans with daily tasks, built-in problem-solving practice, and weekend assignments with **promotion gates** at the end of each week.
+This folder contains a complete, self-contained Django intern training package with a strong fundamentals focus. It includes week-by-week lesson plans with daily tasks, comprehensive problem-solving practice (100+ curated problems), and weekend assignments with **promotion gates** at the end of each week.
 
 ### Quick Links
+- **[PHILOSOPHY.md](intern_training/PHILOSOPHY.md)** - ⭐ **START HERE**: Training philosophy and first principles
 - **[TRAINING.md](intern_training/TRAINING.md)** - High-level overview and ground rules
 - **[STRUCTURE.md](intern_training/STRUCTURE.md)** - Program structure, gates, and learning progression
+- **[DAILY_TEMPLATE.md](intern_training/DAILY_TEMPLATE.md)** - Daily workflow template (Polya's method)
 - **This README** - Setup, daily index, and submission guidelines
 
 These plans are standalone; existing `modules/*` in this repo can be used as optional references.
+
+---
+
+## Programme Philosophy: Definition Before Motion
+
+> **"There is no algorithm for a problem you haven't defined."**  
+> Progress is a vector: **definition** (direction) + **effort** (magnitude) = results
+
+This programme follows **first principles thinking**: clarity before action, understanding before execution.
+
+**Before every task, answer these four questions**:
+1. **What exactly am I building/learning?** (Define the problem)
+2. **What does success look like?** (Acceptance criteria)
+3. **Why does this matter for production Django?** (Purpose)
+4. **What constraints shape my approach?** (Limits)
+
+**If you can't answer these clearly, stop and get clarity before coding.**
+
+Every day follows **Polya's method**: Understand → Plan → Execute → Reflect (see [DAILY_TEMPLATE.md](intern_training/DAILY_TEMPLATE.md))
+
+Read [PHILOSOPHY.md](intern_training/PHILOSOPHY.md) for complete training philosophy and anti-patterns to avoid.
+
+---
+
+### Programme outcomes
+
+#### What you'll be able to do after this programme
+- **Day 1 on the team**: Understand existing Django codebases; read and modify models, views, forms, and templates
+- **Week 1 on the team**: Implement small features independently; write comprehensive tests; submit clean PRs with proper documentation
+- **Month 1 on the team**: Own medium-sized features end-to-end with minimal supervision; participate effectively in code reviews
+- **Technical competence**: Python fluency, OOP design mastery, DSA fundamentals, testing mindset, Django CRUD expertise
+- **Professional skills**: Git workflows, collaborative development, problem decomposition, clear technical communication
+
+#### Skills you'll master
+- **Foundations-first confidence**: Linux, Git, shell, Python 3.12, OOP, data structures & algorithms, and systematic problem‑solving
+- **Code quality discipline**: `black`, `isort`, `pylint`, type hints, docstrings, and security hygiene (secrets, validation, dependency management)
+- **Testing mindset**: pytest mastery; write unit tests for core logic; TDD awareness; test coverage understanding
+- **Data structures & algorithms**: Arrays, hashmaps, stacks, queues, trees, graphs; time/space complexity analysis; common patterns
+- **Web literacy**: HTTP/REST fundamentals, HTML/CSS/JS basics to understand full-stack flows
+- **Django readiness**: Project/app structure, ORM mastery, URL routing, templates, forms, CRUD operations, admin customization, basic auth
+- **Data engineering basics**: CSV/JSON processing, validation, ETL pipelines, CLI tool development
+- **Version Control and Team integration**: Git branching strategies, PR etiquette, code review participation, readable commits, comprehensive documentation
+
+#### Deliverable
+A production-ready Django CRUD application with:
+- Clean architecture and separation of concerns
+- Comprehensive unit test suite
+- Proper error handling and validation
+- Clear documentation and setup instructions
+- Ready to be extended by the team on day one
+
+### Programme plan (6-week fundamentals-first)
+This pacing dedicates 4 weeks to fundamentals before Django, ensuring solid foundations for team integration.
+
+**Week 1 — Systems + Python Basics**
+- Linux, Git, shell workflows
+- Python: data types, control flow, functions, modules
+- Tooling: `black`, `isort`, `pylint`, type hints
+- Problem-solving: 25-35 problems from ProblemBank_Python.md
+- Weekend: Energy Insights CLI
+
+**Week 2 — Python Advanced + OOP**
+- Classes, inheritance, composition, dunder methods
+- Dataclasses, encapsulation, design patterns
+- Exceptions, file I/O, CSV/JSON processing
+- Packaging and module organization
+- Problem-solving: 20-25 problems from ProblemBank_OOP.md
+- Weekend: Refactored package with OOP design
+
+**Week 3 — Data Structures & Algorithms**
+- Arrays, hashmaps, stacks, queues
+- Sorting, searching, two pointers, sliding window
+- Trees and graphs basics
+- Time/space complexity analysis
+- Problem-solving: 30-40 problems from ProblemBank_DSA.md
+- Weekend: Algorithm implementations with tests
+
+**Week 4 — Testing + Data Engineering**
+- pytest mastery: fixtures, parametrization, mocking
+- Data validation and ETL pipelines
+- CLI tools with argparse
+- HTTP/REST basics, Python `requests`
+- Problem-solving: 15-20 problems from ProblemBank_DataHandling.md
+- Weekend: Complete data pipeline with tests
+
+**Week 5 — Django Foundations**
+- Project setup, apps, settings, migrations
+- Models, ORM, QuerySets (select_related/prefetch_related)
+- URL routing, FBVs/CBVs, templates
+- Forms, validation, CRUD operations
+- Admin customization
+- Problem-solving: 15-20 problems from ProblemBank_Django.md (models/views)
+- Weekend: Task Tracker CRUD app
+
+**Week 6 — Django Advanced + Integration**
+- Authentication, permissions, per-user data
+- Form validation, messages framework
+- Pagination, search, filtering
+- Django testing (models/views/forms)
+- DRF basics (optional): simple REST API
+- Problem-solving: 10-15 problems from ProblemBank_Django.md (auth/API/testing)
+- Weekend: Production-ready Django app with auth + tests
 
 ### What you will need
 - Python 3.12+
@@ -34,56 +138,23 @@ black . && isort . && pylint **/*.py || true
 ```
 
 ### How to use these plans
-- Follow [week01.md](week01.md) through [week04.md](week04.md) in order.
-- Every day includes: topics, hands-on tasks, problem-solving (LeetCode/Project Euler), function specs (where applicable), and deliverables.
-- Weekends have a focused assignment to consolidate the week's learning with **acceptance criteria** (promotion gate).
-- Keep a daily log (`LEARNING.md`) of insights, gotchas, and links to your PRs.
-- Week 5 ([week05.md](week05.md)) is an optional bonus week for fullstack integration (requires passing Week 4 gate).
+- Follow the weekly plan above; each week has a corresponding `intern_training/weekXX.md` file with daily details.
+- **Daily quota**: Solve 5-7 problems per day from the relevant Problem Bank (mix of Core, Stretch, Challenge).
+- Every day includes: topics, hands-on tasks, problem-solving with tests, and deliverables.
+- Weekends have a focused project assignment to consolidate the week's learning with **acceptance criteria** (promotion gate).
+- Keep a daily log (`LEARNING.md`) of insights, gotchas, problem solutions, and links to your PRs.
+- **Total problems**: 115-145 curated problems across 6 weeks.
 
-### Directory
-- [week01.md](intern_training/week01.md): Linux, Git, Python fundamentals, shell scripting, DSA warmup
-- [week02.md](intern_training/week02.md): OOP, web basics, Django project setup, CRUD, admin, templates
-- [week03.md](intern_training/week03.md): Django auth, forms, validations, simple REST API (DRF), testing basics
-- [week04.md](intern_training/week04.md): Templates consolidation, CRUD polish, testing basics
-- [week05.md](intern_training/week05.md) (bonus): Fullstack integration (Django API + Frontend)
+### Weekly index (6-week plan)
+- [week01.md](intern_training/week01.md): Systems + Python Basics
+- [week02.md](intern_training/week02.md): Python Advanced + OOP
+- [week03.md](intern_training/week03.md): Data Structures & Algorithms
+- [week04.md](intern_training/week04.md): Testing + Data Engineering
+- [week05.md](intern_training/week05.md): Django Foundations
+- [week06.md](intern_training/week06.md): Django Advanced + Integration
 
-### Daily index
-- Week 1
-  - [Day 1 — Linux + Git Foundations](intern_training/week01/day01.md)
-  - [Day 2 — Python Essentials I + Local Quality Tools](intern_training/week01/day02.md)
-  - [Day 3 — Control Flow, Errors, Files, CSV Stats](intern_training/week01/day03.md)
-  - [Day 4 — Shell Scripting + Packaging](intern_training/week01/day04.md)
-  - [Day 5 — DSA Warmup + Refactor and Test](intern_training/week01/day05.md)
-  - [Weekend — Energy Insights CLI](intern_training/week01/weekend.md)
-- Week 2
-  - [Day 1 — OOP and Packaging](intern_training/week02/day01.md)
-  - [Day 2 — Web Basics (HTML, CSS, JS)](intern_training/week02/day02.md)
-  - [Day 3 — Django Project Setup](intern_training/week02/day03.md)
-  - [Day 4 — Models, Admin, CRUD](intern_training/week02/day04.md)
-  - [Day 5 — Templates, Validation, UX Polish](intern_training/week02/day05.md)
-  - [Weekend — Polished Task Tracker](intern_training/week02/weekend.md)
-- Week 3
-  - [Day 1 — Auth and Per-User Data](intern_training/week03/day01.md)
-  - [Day 2 — Forms and Validation](intern_training/week03/day02.md)
-  - [Day 3 — Simple REST API with DRF](intern_training/week03/day03.md)
-  - [Day 4 — Testing Basics](intern_training/week03/day04.md)
-  - [Day 5 — Pagination and Simple Performance](intern_training/week03/day05.md)
-  - [Weekend — API-first Enhancements](intern_training/week03/weekend.md)
-- Week 4
-  - [Day 1 — Templates Deep Dive](intern_training/week04/day01.md)
-  - [Day 2 — Forms, Messages, and Validation](intern_training/week04/day02.md)
-  - [Day 3 — List Pagination, Search, and Sorting](intern_training/week04/day03.md)
-  - [Day 4 — Admin Polish and Template Customization](intern_training/week04/day04.md)
-  - [Day 5 — Testing Basics and Template Refinements](intern_training/week04/day05.md)
-  - [Weekend — Templates and Admin Consolidation](intern_training/week04/weekend.md)
-- Week 5 (Bonus)
-  - [Fullstack Overview](intern_training/week05.md)
-  - [Day 1 — Frontend Scaffold + API Consumption](intern_training/week05/day01.md)
-  - [Day 2 — Auth Integration and Secure Calls](intern_training/week05/day02.md)
-  - [Day 3 — Create/Update Flows and Form UX](intern_training/week05/day03.md)
-  - [Day 4 — UI Polish and State Management](intern_training/week05/day04.md)
-  - [Day 5 — E2E Sanity and Docs](intern_training/week05/day05.md)
-  - [Weekend — Fullstack Mini Demo](intern_training/week05/weekend.md)
+### Daily detail
+Use the per‑day plans under `intern_training/weekXX/` for granular tasks. All Week 3 (DSA) and Week 6 (Django Advanced) materials are fully updated and aligned with the programme.
 
 ### Sample data and inputs
 - Logs for shell scripting tasks
@@ -102,6 +173,27 @@ black . && isort . && pylint **/*.py || true
 ### Practice exercises (supplemental)
 - `intern_training/week01/day02_exercises.md`: Python fundamentals practice (optional)
 - `week02/day01_exercises.md`: OOP fundamentals practice (mandatory for Week 2 gate)
+
+### Problem banks (115 curated problems)
+- **[ProblemBank_Python.md](intern_training/ProblemBank_Python.md)**: 25 problems (strings, lists, dicts, comprehensions, functions, file I/O)
+- **[ProblemBank_OOP.md](intern_training/ProblemBank_OOP.md)**: 18 problems (classes, inheritance, composition, design patterns)
+- **[ProblemBank_DSA.md](intern_training/ProblemBank_DSA.md)**: **35 problems** (arrays, stacks, queues, sorting, searching, two-pointers, sliding window, **5 core tree/recursion problems**, 2 graphs)
+- **[ProblemBank_DataHandling.md](intern_training/ProblemBank_DataHandling.md)**: 15 problems (CSV/JSON processing, ETL pipelines, validation, testing)
+- **[ProblemBank_Django.md](intern_training/ProblemBank_Django.md)**: 22 problems (models, views, forms, templates, admin, testing)
+
+**Total: 115 problems** with sample inputs/outputs and complexity guidance.
+
+**Bonus**: ProblemBank_DSA.md includes 21 additional **advanced/optional problems** for interview prep (not required for program).
+
+**Note**: Legacy problem banks (ProblemBank_A, ProblemBank_B) have been removed. Use the new Problem Banks listed above.
+
+**Structure**: Core (must), Stretch (nice), Challenge (bonus) for each bank.
+
+**Daily quota**: 5-7 problems/day; submit solutions with tests and type hints; document learnings in `LEARNING.md`.
+
+**Legacy exercise files** (still available):
+- `intern_training/week01/day02_exercises.md`: Python fundamentals practice
+- `intern_training/week02/day01_exercises.md`: OOP fundamentals practice
 
 ### Submitting daily work
 - Open a PR in your playground repo named `weekXX-dayYY: <short-title>`.

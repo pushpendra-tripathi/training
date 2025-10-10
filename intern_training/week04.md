@@ -1,72 +1,153 @@
-## Week 4 — Templates Consolidation: UI, Admin, and Tests
+## Week 4 — Testing + Data Engineering
 
 ### Weekly learning goals
-- Build upon Week 2 templates and Week 3 auth/APIs to deliver a polished, template-first app.
-- Prepare the codebase so it’s straightforward to add a frontend client in Week 5 (bonus).
-- Keep backend code clean with local `black`, `isort`, and `pylint`.
+- **Understand database fundamentals**: SQL, normalization, constraints, indexes, transactions
+- Master pytest: fixtures, parametrization, mocking, property-based testing
+- Build robust data validation and ETL pipelines loading to databases
+- Develop CLI tools with professional-grade UX
+- Understand HTTP/REST and consume APIs with Python
+- Apply TDD mindset to data processing workflows
 
 ### Daily schedule
 
-#### Day 1 (Mon): Templates Deep Dive
+#### Day 1 (Mon): pytest Mastery
 - Topics
-  - Inheritance, blocks, includes, built-in and custom filters/tags.
+  - Fixtures: setup/teardown, scope, parametrization
+  - Mocking and patching external dependencies
+  - Property-based testing with hypothesis
+  - Test organization and best practices
 - Hands-on
-  - Create `base.html`, extract partials, and add a custom filter for task status.
-- Problem solving (45–60 min)
-  - From LeetCode: Valid Parentheses (revisit with stack variations)
-- Deliverables
-  - DRY templates with base and partials; notes on custom filter.
-
-#### Day 2 (Tue): Forms, Messages, and Validation
-- Topics
-  - ModelForm polish, messages framework, error display.
-- Hands-on
-  - Style fields, show field/non-field errors, and surface success/error messages.
+  - Refactor Week 1-2 code with comprehensive pytest suite
+  - Add fixtures for test data, parametrize edge cases
+  - Solve 3-4 testing problems from ProblemBank_DataHandling.md
 - Problem solving
-  - From LeetCode: Detect Capital; Reverse Linked List
+  - Core: Fixture factory pattern, parametrize CSV validation
+  - Stretch: Property-based tests for data transforms
 - Deliverables
-  - Friendly forms and clear feedback on actions.
+  - Comprehensive test suite with >90% coverage; fixtures documented
 
-#### Day 3 (Wed): List Pagination, Search, and Sorting
+#### Day 2 (Tue): Database Fundamentals + Data Validation
 - Topics
-  - Server-side pagination, query-based search and sorting.
+  - **SQL basics**: CREATE, INSERT, SELECT, UPDATE, DELETE, JOIN
+  - **Database design**: Normalization (1NF, 2NF, 3NF), constraints (PK, FK, UNIQUE, NOT NULL)
+  - **Indexes**: When and why to use them, performance impact
+  - **Transactions**: ACID properties, BEGIN, COMMIT, ROLLBACK
+  - **Python sqlite3**: Connections, cursors, parameterized queries (prevent SQL injection)
+  - Schema validation for CSV/JSON
+  - Data transformation patterns
+  - Pipeline design: Extract → Transform → Load (to database)
 - Hands-on
-  - Add pagination controls; implement `?q=` search and `?sort=` (due_date/status).
+  - Create database schema with constraints and indexes
+  - Implement CRUD operations with parameterized queries
+  - Build validation module with clear error messages
+  - Implement ETL pipeline loading to SQLite with transactions
+  - Solve 3-4 data handling problems from ProblemBank_DataHandling.md
 - Problem solving
-  - From LeetCode: Valid Sudoku
+  - Core: Database schema with constraints, CSV validation, JSON schema validation
+  - Stretch: ETL Pipeline loading to database with transactions
+  - Challenge: Transaction rollback on validation errors
 - Deliverables
-  - Usable list page with pagination, search, and sorting.
+  - Database schema with constraints and indexes; validation module with tests; ETL pipeline loading to SQLite
 
-#### Day 4 (Thu): Admin Polish and Template Customization
+#### Day 3 (Wed): CLI Tools with argparse
 - Topics
-  - Admin list/filters/search, custom actions, simple branding.
+  - argparse: subcommands, argument types, help text
+  - Exit codes and error handling
+  - Logging with levels and verbosity flags
+  - Configuration management (files, env vars)
 - Hands-on
-  - Configure columns/filters; add a custom action; minor template tweaks.
+  - Build professional CLI for ETL pipeline
+  - Add `--verbose`, `--config`, `--output` flags
+  - Solve 2-3 CLI-focused problems
 - Problem solving
-  - From LeetCode: Group Anagrams
+  - Core: CLI summary tool
+  - Stretch: Plugin interface for formats
+  - Challenge: Logging and verbosity
 - Deliverables
-  - Productive admin with a working custom action.
+  - Polished CLI with helpful `--help`; comprehensive logging
 
-#### Day 5 (Fri): Testing Basics and Template Refinements
+#### Day 4 (Thu): HTTP/REST + Python requests
 - Topics
-  - Tests for views/forms; verifying blocks/includes/custom filters.
+  - HTTP methods, status codes, headers
+  - REST API principles and design
+  - Python `requests`: GET, POST, error handling, authentication
+  - API testing and mocking
 - Hands-on
-  - Add tests for list/search/pagination and form validation; tidy templates.
+  - Build script to consume public API (weather, GitHub, etc.)
+  - Handle rate limiting, retries, timeouts
+  - Create simple web page rendering JSON (from Week 2 materials)
 - Problem solving
-  - From LeetCode: Move Zeroes
+  - Consume API and transform data
+  - Error handling for network issues
 - Deliverables
-  - Tests passing and polished UI; updated README.
+  - API client with error handling; static page rendering API data
 
-### Weekend assignment — Templates and Admin Consolidation
-- Ensure base/partials/custom filters in use across pages.
-- Verify list (pagination/search/sorting) and detail page polish.
-- Confirm admin filters/search and custom action work; capture a screenshot.
-- Update README with setup/testing and screenshots; run `black`, `isort`, `pylint` locally.
+#### Day 5 (Fri): Performance Optimization & Code Quality
+- Topics
+  - Performance profiling: cProfile, timeit, memory profiling
+  - Optimization techniques: generators, better data structures, built-ins
+  - Code quality: type hints, docstrings, unit testing review
+  - Production-ready code checklist
+- Hands-on
+  - Profile ETL pipeline to find bottlenecks
+  - Optimize using generators and better data structures
+  - Ensure comprehensive unit test coverage (>85%)
+  - Solve 2-3 optimization problems
+- Problem solving
+  - Core: Profile and optimize CSV processing
+  - Stretch: Memory-efficient generators
+  - Challenge: Optimize validation logic
+- Deliverables
+  - Performance report with benchmarks; optimized pipeline; unit tests >85% coverage
+
+### Weekend assignment
+**Complete Data Engineering Pipeline**
+
+Build a production-grade ETL pipeline:
+
+1. **Extract**: Read from multiple sources (CSV, JSON, API)
+2. **Transform**: 
+   - Validate with comprehensive schema checks
+   - Clean and normalize data
+   - Enrich with derived fields
+   - Handle missing/malformed data gracefully
+3. **Load**: Write to JSON and SQLite database
+4. **CLI**: Professional interface with:
+   - Subcommands: `validate`, `transform`, `load`, `report`
+   - Helpful `--help` and error messages
+   - Logging with `--verbose` flag
+   - Configuration file support
+5. **Testing**:
+   - Unit tests for each transform
+   - Integration tests for full pipeline
+   - Property-based tests where applicable
+   - >90% coverage
+6. **Documentation**:
+   - Comprehensive README
+   - Architecture diagram
+   - Example runs with output
+   - Error handling guide
+
+**Acceptance criteria:**
+- Pipeline processes real data correctly
+- 15+ data handling problems solved from ProblemBank
+- Comprehensive test suite (unit + integration)
+- CLI is professional and user-friendly
+- Error handling is robust and informative
+- Documentation is clear and complete
+- Code quality tools pass
+
+### Suggested problems (15-20 total for the week)
+- See `intern_training/ProblemBank_DataHandling.md` (Core/Stretch/Challenge)
+- Daily quota: 3-5 problems (focus on quality and testing depth)
 
 ### Promotion gate (advance to Week 5 if all met)
-- Required to advance:
-  - Templates are DRY (base + includes); custom filter works.
-  - List supports pagination/search/sorting; forms show clear validation.
-  - Admin is functional with custom action; tests pass locally.
+- ETL pipeline functional and tested
+- 15+ data handling problems solved
+- Test coverage >90%
+- HTTP/REST concepts demonstrated
+- CLI tools professional-grade
+- Weekend assignment complete with all criteria
+- Quality gates pass
 
 

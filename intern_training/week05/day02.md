@@ -1,27 +1,80 @@
-## Week 5 · Day 2 — Auth Integration and Secure Calls
+## Week 5 · Day 2 — Views & URL Routing
+
+### Problem Definition (Answer BEFORE starting)
+**What exactly are you building today?**  
+Complete CRUD views (list, detail, create, update, delete) using both FBVs and CBVs, with proper URL routing and named patterns.
+
+**Why does this matter for Django?**  
+Views are the core of Django applications. Understanding FBVs vs CBVs, URL routing, and the request/response cycle is fundamental to building any Django feature.
+
+**What does success look like?**  
+- All CRUD operations working through views
+- URLs configured with named patterns and reverse() working
+- Can explain when to use FBV vs CBV
+
+---
 
 ### Objectives
-- Connect frontend to authenticated endpoints and handle CSRF for write actions.
+- Build views using FBVs and CBVs
+- Configure URL routing with named patterns
+- Master the request/response cycle
 
 ### Tasks
-1) Login/logout
-   - Add a login UI; persist session; show logout.
-2) CSRF handling
-   - Obtain CSRF token and include it in POST/PUT/DELETE requests.
-3) Protected views
-   - Show tasks only for logged-in users; handle unauthenticated states.
+1) Function-Based Views (FBVs)
+   - Create list view for all tasks
+   - Create detail view for single task
+   - Understand request and response objects
+   - Return HttpResponse, render(), redirect()
 
-### Problem solving (45–60 min)
-- LeetCode: [Detect Capital](https://leetcode.com/problems/detect-capital/), [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+2) URL Configuration
+   - App-level URLs: `tasks/urls.py`
+   - Project-level URLs: include() app URLs
+   - URL patterns with path()
+   - Named URLs and reverse()
+   - URL parameters: `<int:pk>`, `<slug:slug>`
+
+3) Class-Based Views (CBVs)
+   - ListView: display all tasks with pagination
+   - DetailView: display single task
+   - CreateView: form to create task
+   - UpdateView: form to edit task
+   - DeleteView: confirm and delete
+   - Override get_queryset(), get_context_data()
+
+4) Request/Response Cycle
+   - Middleware flow
+   - View processing
+   - Template rendering
+   - Context data
+
+5) Problem solving (3-4 problems from ProblemBank_Django.md)
+   - Core: FBV List view
+   - Core: CBV ListView
+   - Core: Detail View with slug
+   - Stretch: Create View with validation
+   - Stretch: Update and Delete Views
 
 ### Outcomes
-- Secure authenticated calls; clear behavior across auth states.
+- CRUD views functional
+- URLs properly configured
+- Understand FBV vs. CBV tradeoffs
 
 ### Deliverables
-- Auth flow wired in UI and working against local backend.
+- All CRUD views implemented (list, detail, create, update, delete)
+- URL routing with named patterns
+- Views accessible at proper URLs
+- 3-4 view problems solved
 
 ### Submission checklist
-- [ ] Auth-required API calls succeed; unauthenticated blocked with proper UI
-- [ ] CSRF token included for writes
-- [ ] README documents auth steps
+- [ ] List and Detail views working
+- [ ] Create, Update, Delete views working
+- [ ] URLs configured with names
+- [ ] reverse() used in code
+- [ ] 3+ view problems solved
+- [ ] Code passes quality tools
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+  - [ ] Problem definition answered before coding
+  - [ ] Can explain why today's work matters for Django
+  - [ ] Documented patterns learned and when to apply them
+
 

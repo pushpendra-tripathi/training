@@ -1,9 +1,10 @@
-## Week 2 — OOP, Web Basics, Django Setup, CRUD, Admin, Templates
+## Week 2 — Python Deep Dive + OOP + Testing
 
 ### Weekly learning goals
-- Apply OOP in Python (dataclasses, composition, dunder methods) and structure packages.
-- Understand web fundamentals: HTTP, REST, HTML semantics, CSS layout, basic JS.
-- Create a Django project and implement a CRUD app with admin and templates.
+- Apply OOP in Python (classes first, then dataclasses), composition vs inheritance, dunder methods.
+- Structure packages with clear boundaries and public APIs.
+- Strengthen error handling, file I/O, CSV/JSON processing.
+- Write unit tests for core logic with pytest; aim for meaningful coverage.
 
 ### Daily schedule
 
@@ -19,48 +20,44 @@
 - Deliverables
   - Refactored modules with clear separation of concerns; format/lint clean.
 
-#### Day 2 (Tue): Web basics
+#### Day 2 (Tue): Exceptions, files, CSV/JSON
 - Topics
-  - HTTP verbs, status codes; static vs dynamic pages; progressive enhancement.
-  - HTML semantics, CSS layout (Flexbox), minimal JS to fetch JSON and render.
+  - Exceptions and custom error types; context managers; robust file handling.
+  - `csv` and `json` modules; validating and transforming data.
 - Hands-on
-  - Build a static page that renders your energy insights from a JSON file; include basic styling.
+  - Extend your Energy Insights package with robust I/O helpers and parameter validation.
 - Problem solving
   - From Project Euler: [Problem 3](https://projecteuler.net/problem=3)
   - From LeetCode: [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 - Deliverables
   - Static site folder with `index.html`, `styles.css`, and a small `app.js`.
 
-#### Day 3 (Wed): Django project start
+#### Day 3 (Wed): Testing with pytest
 - Topics
-  - Django project and app creation, URL routing, views, templates, static files.
-  - Settings basics; development vs production considerations at a high level.
+  - pytest layout, fixtures, parametrization, property-based testing intro.
 - Hands-on
-  - Create `tasktracker` project and `tasks` app.
-  - Implement a homepage and a tasks list view using a template; include CSRF in forms.
+  - Add tests for your utils and data transforms; introduce parametrized tests for corner cases.
 - Problem solving
   - From LeetCode: [Ransom Note](https://leetcode.com/problems/ransom-note/), [Plus One](https://leetcode.com/problems/plus-one/)
 - Deliverables
   - `runserver` works; pages render; committed with clear messages.
 
-#### Day 4 (Thu): Models, admin, CRUD
+#### Day 4 (Thu): Packaging and CLI ergonomics
 - Topics
-  - Models and migrations; Django admin customization; forms/ModelForm; class-based views (ListView, CreateView, UpdateView, DeleteView).
+  - Packaging refinements, `__main__.py`, argparse ergonomics, help text, exit codes.
 - Hands-on
-  - Create `Task` model (title, description, status, due_date, owner optional for now).
-  - Register in admin with list display, filters, search.
-  - Implement CRUD with CBVs and pagination on the list.
+  - Polish the CLI interface; add subcommands; ensure helpful `--help` and error messages.
 - Problem solving
   - From LeetCode: [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
   - From Euler: [Problem 4](https://projecteuler.net/problem=4)
 - Deliverables
   - CRUD flow works end-to-end; screenshots in README.
 
-#### Day 5 (Fri): Templates and UX polish
+#### Day 5 (Fri): Refactor and test hard cases
 - Topics
-  - Template inheritance, static files, messages framework, basic form validation.
+  - Refactor for readability and performance (early returns, naming, small functions).
 - Hands-on
-  - Add base template, navigation, success/error messages, and simple search/filter on tasks.
+  - Add tests covering error paths and boundary inputs; introduce minimal CI-like run (`make test`).
 - Problem solving
   - From LeetCode: [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
   - From LeetCode: [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
@@ -68,10 +65,13 @@
   - Polished UI with template inheritance and messaging; format/lint clean.
 
 ### Weekend assignment
-Polish and extend the Task Tracker:
-- Add a `status` workflow (e.g., Todo, In-Progress, Done) with validation.
-- Implement simple search by title and due-date filter; paginate results.
-- Write a short user guide in `README.md` with screenshots.
-- Ensure `black`, `isort`, `pylint` all pass locally; include a `Makefile` with `format`, `lint`, `run` targets.
+Finalize your Python package:
+- Robust CLI with clear help, validation, and useful exit codes.
+- Solid unit test suite (cover core logic, error paths, and edge cases).
+- README with install/run examples and sample outputs.
+- Quality gate: `black`, `isort`, `pylint` pass locally; `make format`, `make lint`, `make test` work.
+
+### Suggested problems (daily)
+- See `intern_training/ProblemBank_OOP.md` (18 problems with examples and design patterns)
 
 

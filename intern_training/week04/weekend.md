@@ -1,131 +1,223 @@
-## Week 4 · Weekend Assignment — Templates and Admin Consolidation
+## Week 4 · Weekend — Complete Data Engineering Pipeline
 
-### Objective
-Consolidate the template-driven UI and admin into a polished, demo-ready app.
+### Overview
+Build a production-grade ETL pipeline with comprehensive testing, professional CLI, and complete documentation.
 
-### Problem Statement
-Refine the Task Tracker into a production-quality Django application with:
-- Clean, DRY templates using inheritance and reusable components
-- Professional UI with consistent styling and user feedback
-- Feature-rich list view (pagination, search, sorting)
-- Power-user admin interface with custom actions
-- Comprehensive test coverage for all views
+### Requirements
 
-This is the final polish before the app is ready for real users.
+#### 1. Extract (Multiple Sources)
+Implement data extraction from:
+- **CSV files**: energy data, transactions, user data
+- **JSON files**: configuration, nested API responses
+- **Public API**: Real-time data (weather, GitHub, stock prices, etc.)
 
-### Expected UI/UX Quality
+Each extractor should:
+- Handle missing files/endpoints gracefully
+- Validate source data format
+- Return standardized internal format
+- Log extraction progress
 
-#### 1. Template Structure (DRY Principle)
-```
-templates/
-  base.html              # Main layout with nav, messages, footer
-  tasks/
-    _task_card.html      # Reusable task display partial
-    _task_form.html      # Reusable form partial
-    list.html            # Extends base, includes _task_card
-    detail.html          # Extends base, clean layout
-    form.html            # Extends base, includes _task_form
-```
+#### 2. Transform (Validate + Clean + Enrich)
+Implement comprehensive data transformation:
+- **Schema Validation**:
+  - Required fields present
+  - Correct data types
+  - Value range checks
+  - Custom business rules
+  - Collect ALL errors (don't fail on first)
+- **Data Cleaning**:
+  - Strip whitespace
+  - Normalize values (case, format)
+  - Handle missing values (fill, drop, flag)
+  - Remove duplicates
+- **Data Enrichment**:
+  - Derived fields (calculations, aggregations)
+  - Lookups from reference data
+  - Timestamp conversions
+  - Data type conversions
 
-#### 2. Base Layout Features
-- **Navigation**: Logo, Home, Tasks, New Task, Admin (if staff), Logout
-- **Messages area**: Success (green), Error (red), Warning (yellow) with auto-dismiss
-- **Footer**: Copyright, version, helpful links
-- **Responsive**: Works on mobile and desktop
+#### 3. Load (Multiple Destinations)
+Implement data loading to:
+- **JSON file**: Validated and transformed data
+- **SQLite database**: 
+  - Proper schema with constraints
+  - Indexes on frequently queried fields
+  - Atomic transactions
+  - Error rollback
 
-#### 3. Task List View (`/tasks/`)
-**Features**:
-- **Search bar**: "Search by title..." input, searches on submit
-- **Filters**: Due date range picker, status dropdown
-- **Sorting**: Click column headers to sort by title, status, or due_date (asc/desc)
-- **Pagination**: "Showing 1-10 of 45 tasks" with Prev/Next and page numbers
-- **Empty state**: "No tasks found. Create your first task!"
-- **Task cards**: Title (link), status badge, due date with color (red if overdue), description preview
+#### 4. Professional CLI
+Build CLI with subcommands:
+```bash
+# Validate source data
+python -m pipeline validate --source data.csv --schema schema.json
 
-**URL Examples**:
-```
-/tasks/                                    # All tasks, first page
-/tasks/?q=meeting                          # Search
-/tasks/?status=todo&due_before=2025-12-31  # Filtered
-/tasks/?sort=due_date&order=asc&page=2     # Sorted and paginated
-```
+# Transform data
+python -m pipeline transform --input data.csv --output clean.json --config config.yaml
 
-#### 4. Task Detail View (`/tasks/<id>/`)
-- Clean card layout with all fields
-- Status badge (colored: todo=gray, in_progress=blue, done=green)
-- Due date with relative time ("Due in 3 days" or "Overdue by 2 days")
-- Action buttons: Edit (blue), Delete (red), Back to List
-- Timestamps: Created and last updated
+# Load to database
+python -m pipeline load --input clean.json --db pipeline.db
 
-#### 5. Task Form (Create/Edit)
-- All fields with placeholders and help text
-  - Title: "Enter a descriptive title" (required)
-  - Description: "Optional details..." (textarea)
-  - Status: Dropdown with descriptions
-  - Due date: Date picker (HTML5 date input)
-- Validation errors displayed above field in red
-- Non-field errors at top of form
-- Submit button: "Create Task" or "Update Task"
-- Cancel link back to list
+# Full pipeline
+python -m pipeline run --config config.yaml --verbose
 
-#### 6. Django Admin Enhancements
-**List Display**:
-- Columns: ☐ (checkbox), Title, Status (colored), Due Date, Created
-- Colored status: Custom method with colored spans
-- Date hierarchy: By due_date
-
-**Filters** (right sidebar):
-- Status (all, todo, in_progress, done)
-- Due date (today, this week, this month, overdue)
-- Created date
-
-**Search**: By title and description
-
-**Custom Actions**:
-- "Mark selected as Done" (bulk update)
-- "Mark selected as In Progress"
-- "Export to CSV" (bonus)
-
-**Inline Editing**: Quick edit without leaving list view
-
-#### 7. Visual Polish
-- **Colors**: Consistent color scheme (primary, success, danger, warning)
-- **Typography**: Clear hierarchy (h1, h2, body text)
-- **Spacing**: Comfortable padding and margins
-- **Buttons**: Consistent style with hover states
-- **Forms**: Clear focus states, good spacing
-- **Messages**: Toast/alert style with icons
-
-### Example User Journey
-```
-1. Land on /tasks/ → See 10 tasks in cards, search bar, filters
-2. Type "meeting" in search → Submit → See filtered results
-3. Click "Due Date" column → List re-sorts ascending
-4. Click task title → See detail page with all info
-5. Click "Edit" → See pre-filled form
-6. Change status to "Done" → Submit → Redirect to list with success message
-7. Visit /admin/tasks/task/ → See rich list with filters
-8. Select 3 tasks → Choose "Mark as Done" → Confirm → See success
-9. Take screenshots of: list, detail, form, admin list, admin action
+# Generate report
+python -m pipeline report --db pipeline.db --format table
 ```
 
-### Step-by-step tasks
-1) Templates
-   - Ensure base layout, partials, and custom filters are used across pages.
-2) List and detail
-   - Verify pagination, search, and sorting on list; ensure detail page is clear and styled.
-3) Forms
-   - Confirm validation messages are clear; add help texts and placeholders where helpful.
-4) Admin
-   - Verify filters, search, and the custom action; capture a screenshot of action in use.
-5) Docs
-   - Update README with setup, testing, and screenshots of key pages.
-6) Quality
-   - Run `black .`, `isort .`, and `pylint **/*.py` locally; fix issues.
+Features required:
+- **Subcommands**: validate, transform, load, run, report
+- **Arguments**: `--source`, `--output`, `--config`, `--verbose`, `--dry-run`
+- **Help text**: Comprehensive `--help` for each subcommand
+- **Exit codes**: 0 (success), 1 (error), 2 (usage error)
+- **Progress**: Show progress for long operations
+- **Logging**: Configurable verbosity (INFO/DEBUG)
+- **Configuration**: Support config files + env vars + CLI overrides
 
-### Acceptance criteria (promotion to Week 5 bonus)
-- UI is consistent and DRY; list/search/pagination/sorting work as documented.
-- Admin is productive and shows the custom action working.
-- README is complete with screenshots and commands; formatting/linting pass locally.
+#### 5. Comprehensive Testing
+Test suite must include:
+- **Unit Tests** (>90% coverage):
+  - Each extractor
+  - Each validator
+  - Each transformer
+  - Each loader
+  - CLI argument parsing
+- **Comprehensive Unit Tests** (>90% coverage):
+  - Each component tested separately
+  - End-to-end test with temp database and files
+  - Error scenarios covered
+  - Rollback on database failure tested
+- **Property-Based Tests** (at least 2):
+  - Data transformations
+  - Validation rules
+- **Mocking**:
+  - File I/O operations
+  - API calls
+  - Database connections
+- **Fixtures**:
+  - Test data (CSV, JSON)
+  - Database schema
+  - Config files
+
+#### 6. Documentation
+Create comprehensive documentation:
+- **README.md**:
+  - Project overview
+  - Installation instructions
+  - Quick start guide
+  - Configuration options
+  - Usage examples
+  - Architecture diagram
+- **ARCHITECTURE.md**:
+  - System design
+  - Data flow diagram
+  - Component responsibilities
+  - Error handling strategy
+- **API.md** (if applicable):
+  - Public API client usage
+  - Rate limits
+  - Authentication
+- **TESTING.md**:
+  - How to run tests
+  - Test organization
+  - Coverage requirements
+
+### Suggested Structure
+```
+week04/
+  weekend/
+    README.md
+    ARCHITECTURE.md
+    pipeline/
+      __init__.py
+      cli.py                # CLI entry point
+      extractors/
+        __init__.py
+        csv_extractor.py
+        json_extractor.py
+        api_extractor.py
+      validators/
+        __init__.py
+        schema.py
+        rules.py
+      transformers/
+        __init__.py
+        cleaner.py
+        enricher.py
+      loaders/
+        __init__.py
+        json_loader.py
+        db_loader.py
+      config.py
+      logger.py
+    tests/
+      conftest.py           # Shared fixtures
+      test_extractors.py
+      test_validators.py
+      test_transformers.py
+      test_loaders.py
+      test_pipeline.py       # End-to-end pipeline test
+      test_cli.py
+      fixtures/             # Test data
+        sample.csv
+        sample.json
+        schema.json
+    schemas/
+      energy_schema.json
+      user_schema.json
+    config/
+      dev.yaml
+      prod.yaml
+    data/                   # Sample input data
+      energy_prices.csv
+      transactions.json
+```
+
+### Acceptance Criteria
+- [ ] **Extract**: Read from CSV, JSON, and public API
+- [ ] **Transform**: Schema validation + cleaning + enrichment
+- [ ] **Load**: Write to JSON and SQLite with proper schema
+- [ ] **CLI**: All subcommands working with helpful `--help`
+- [ ] **Logging**: Configurable verbosity with structured logs
+- [ ] **Configuration**: Config file + env vars + CLI overrides
+- [ ] **Error Handling**:
+  - [ ] Graceful error messages
+  - [ ] Error collection (all errors, not just first)
+  - [ ] Database rollback on failure
+  - [ ] Retry logic for API calls
+- [ ] **Testing**:
+  - [ ] Test coverage >90%
+  - [ ] Unit tests for all components
+  - [ ] End-to-end pipeline test with temp database
+  - [ ] Mocked external dependencies
+  - [ ] Property-based tests (2+)
+- [ ] **Documentation**:
+  - [ ] README with setup and usage
+  - [ ] Architecture diagram
+  - [ ] Code comments and docstrings
+  - [ ] Example runs with output
+- [ ] **Code Quality**:
+  - [ ] Passes `black`, `isort`, `pylint`
+  - [ ] Type hints throughout
+  - [ ] No security issues (secrets in env, not code)
+- [ ] **Problem Solving**: 15+ problems from ProblemBank_DataHandling.md
+
+### Promotion Gate
+To advance to Week 5 (Django), you must:
+- ✅ Meet all acceptance criteria above
+- ✅ Pipeline processes real data end-to-end
+- ✅ Tests pass with >90% coverage
+- ✅ CLI is professional and user-friendly
+- ✅ Documentation is comprehensive
+- ✅ Code quality tools pass
+- ✅ Demonstrate understanding of ETL principles
+
+### Tips
+- Start with a simple working pipeline, then add features
+- Test as you build, don't save testing for last
+- Use temp files/databases in tests for isolation
+- Mock external APIs to make tests fast and reliable
+- Profile before optimizing
+- Clear error messages are as important as correct code
+- Documentation should enable someone else to use your pipeline
 
 

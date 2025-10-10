@@ -1,5 +1,19 @@
 ## Week 1 · Day 2 — Python Essentials I + Local Quality Tools
 
+### Problem Definition (Answer BEFORE starting)
+**What exactly are you building today?**  
+A utility module with clean, typed, tested Python functions for text and collection manipulation, passing professional quality tools.
+
+**Why does this matter for Django?**  
+Django views process data (strings, lists, dicts). Clean Python with type hints and quality checks prevents bugs and makes code maintainable.
+
+**What does success look like?**  
+- Functions with type hints and docstrings that pass `black`, `isort`, `pylint`
+- Can manipulate strings, lists, and dicts confidently
+- Quality tools configured and running automatically
+
+---
+
 ### Objectives
 - Master core Python data types and functions.
 - Set up and use `black`, `isort`, and `pylint` locally for code quality.
@@ -58,7 +72,7 @@
    - Run formatters/linters locally:
      - `black .`, `isort .`, and `pylint **/*.py` (use `|| true` if needed to see reports).
 
-### Problem solving (45–60 min)
+### Problem solving
 - LeetCode: [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/), [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 ### Outcomes
@@ -74,5 +88,9 @@
 - [ ] Ran `black .` and `isort .`, and addressed `pylint` feedback
 - [ ] Functions have clear docstrings and type hints
 - [ ] README updated with commands
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+  - [ ] Problem definition answered before coding
+  - [ ] Can explain why quality tools matter for Django teams
+  - [ ] Documented Python patterns learned (comprehensions, type hints, LEGB scope)
 
 

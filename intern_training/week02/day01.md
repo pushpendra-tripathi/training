@@ -1,5 +1,19 @@
 ## Week 2 · Day 1 — OOP and Packaging
 
+### Problem Definition (Answer BEFORE starting)
+**What exactly are you building today?**  
+A task management system using classes with proper encapsulation, dunder methods, and composition over inheritance.
+
+**Why does this matter for Django?**  
+Django models are classes. Understanding OOP (inheritance, composition, dunder methods) is essential for building clean Django apps with custom model behavior.
+
+**What does success look like?**  
+- Classes with proper encapsulation (private attributes, properties)
+- Dunder methods (__repr__, __str__, __eq__) implemented correctly
+- Composition pattern applied appropriately
+
+---
+
 ### Objectives
 - Use classes and dataclasses effectively; prefer composition; write clear `__repr__` and equality.
 - Organize Python packages with clear public APIs and boundaries.

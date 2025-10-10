@@ -1,5 +1,19 @@
 ## Week 1 · Day 4 — Shell Scripting Practice + Python Packaging
 
+### Problem Definition (Answer BEFORE starting)
+**What exactly are you building today?**  
+A properly packaged Python CLI tool that can be installed and run with `python -m`, plus automation with Makefile.
+
+**Why does this matter for Django?**  
+Django projects are Python packages. Understanding packaging, entry points, and automation (Makefile/scripts) is essential for deployment and team workflows.
+
+**What does success look like?**  
+- Installable Python package with CLI entry point
+- Makefile automating format/lint/run tasks
+- Safer shell scripts with error handling
+
+---
+
 ### Objectives
 - Write safer bash scripts and convert a Python script into an installable module entry point.
 
@@ -23,7 +37,7 @@
 3) Makefile convenience
    - Add `Makefile` targets: `format` (black+isort), `lint` (pylint), `run` (example command).
 
-### Problem solving (45–60 min)
+### Problem solving
 - Project Euler: [Problem 1](https://projecteuler.net/problem=1), [Problem 2](https://projecteuler.net/problem=2)
 
 ### Outcomes
@@ -37,5 +51,9 @@
 - [ ] Running `python -m energy_insights --help` shows usage
 - [ ] Makefile targets work on a fresh clone
 - [ ] Code formatted (`black`/`isort`) and linted (`pylint`)
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+  - [ ] Problem definition answered before coding
+  - [ ] Can explain why Python packaging matters for Django
+  - [ ] Documented packaging patterns and Makefile automation benefits
 
 

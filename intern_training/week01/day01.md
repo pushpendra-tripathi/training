@@ -1,5 +1,19 @@
 ## Week 1 · Day 1 — Linux + Git Foundations
 
+### Problem Definition (Answer BEFORE starting)
+**What exactly are you building today?**  
+A production-quality backup script that archives directories with automatic cleanup and proper error handling.
+
+**Why does this matter for Django?**  
+Django deploys on Linux servers. You must navigate filesystems, manage permissions, automate tasks, and use Git for team collaboration.
+
+**What does success look like?**  
+- Confident navigating Linux CLI without fear
+- Working backup script with retention policy
+- Clean Git workflow (branch → commit → PR)
+
+---
+
 ### Objectives
 - Navigate Linux CLI confidently; manipulate files, permissions, and archives.
 - Practice core Git: branch, commit, push, PR; resolve simple conflicts.
@@ -41,5 +55,9 @@
 - [ ] Script executable and works for a sample folder
 - [ ] Clear usage in README (inputs, outputs, retention policy)
 - [ ] PR opened with descriptive title and body
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+  - [ ] Problem definition answered before coding
+  - [ ] Can explain why Linux/Git matter for Django
+  - [ ] Documented what was learned about permissions, archiving, Git workflow
 
 

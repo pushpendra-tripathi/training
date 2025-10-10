@@ -1,76 +1,119 @@
-## Week 3 — Auth, Forms, Validation, Simple APIs, Testing Basics
+## Week 3 — Data Structures & Algorithms
 
 ### Weekly learning goals
-- Add authentication and per-user data access.
-- Strengthen forms, validation, and messages.
-- Expose a small REST API (using Django REST Framework) without overwhelming depth.
-- Learn testing basics and how to verify functionality locally.
+- Master fundamental data structures: arrays, hashmaps, stacks, queues
+- Understand sorting and searching algorithms with complexity analysis
+- Apply problem-solving patterns: two pointers, sliding window, recursion
+- Build intuition for time/space complexity tradeoffs
+- Develop systematic debugging and testing habits for algorithms
 
 ### Daily schedule
 
-#### Day 1 (Mon): Auth and permissions
+#### Day 1 (Mon): Arrays & Hash Tables
 - Topics
-  - Django auth (login, logout, signup), user model basics; messages framework.
-  - Per-user filtering to ensure privacy; authorization checks in views.
+  - Array operations, two-sum pattern, frequency counting
+  - Hash tables: when to use, collision handling, time complexity
+  - Common patterns: prefix sums, sliding window basics
 - Hands-on
-  - Add login/logout views; restrict task listing to the logged-in user; owner on `Task` model.
-- Problem solving (45–60 min)
-  - From LeetCode: [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/), [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
+  - Implement hash table from scratch (simple version)
+  - Solve 5-7 array/hashmap problems from ProblemBank_DSA.md
+- Problem solving (from ProblemBank_DSA.md)
+  - Core: Two Sum, Contains Duplicate, Valid Anagram
+  - Stretch: Group Anagrams, First Non-Repeating Character
 - Deliverables
-  - Authenticated flows working; unauthorized access blocked.
+  - Solutions with tests; complexity analysis in docstrings; patterns documented
 
-#### Day 2 (Tue): Forms and validation
+#### Day 2 (Tue): Stacks & Queues
 - Topics
-  - `ModelForm`, custom `clean_` methods, field validators, error messages.
-  - UX: sticky forms, success/failure banners.
+  - Stack: LIFO, applications (parentheses, backtracking, DFS)
+  - Queue: FIFO, applications (BFS, scheduling)
+  - Monotonic stack/queue patterns
 - Hands-on
-  - Add server-side validation to `Task` creation/update; improve error display in templates.
+  - Implement stack and queue using lists
+  - Solve 5-7 stack/queue problems from ProblemBank_DSA.md
 - Problem solving
-  - From LeetCode: [Min Stack](https://leetcode.com/problems/min-stack/)
-  - From Euler: [Problem 5](https://projecteuler.net/problem=5)
+  - Core: Valid Parentheses, Min Stack
+  - Stretch: Daily Temperatures, Implement Queue using Stacks
 - Deliverables
-  - Robust forms with clear validation and messages.
+  - Implementations with tests; problem solutions with complexity notes
 
-#### Day 3 (Wed): Simple API with DRF
+#### Day 3 (Wed): Sorting & Searching
 - Topics
-  - DRF basics: serializers, viewsets, routers; browsable API.
+  - Binary search and variations
+  - Sorting algorithms: merge sort, quick sort
+  - When to sort vs. when to use other approaches
 - Hands-on
--  - Install DRF and expose `/api/tasks/` with list/create/retrieve/update/delete scoped to the current user.
-  - Add simple serializer validation (e.g., title length, due_date must be in the future).
+  - Implement binary search, merge sort from scratch
+  - Solve 5-7 sorting/searching problems from ProblemBank_DSA.md
 - Problem solving
-  - From LeetCode: [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
-  - From LeetCode: [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+  - Core: Binary Search, Merge Sorted Arrays
+  - Stretch: Search in Rotated Sorted Array, Kth Largest Element
 - Deliverables
-  - API tested with HTTPie/Postman; correct status codes and error shapes.
+  - Algorithm implementations with tests; complexity comparisons documented
 
-#### Day 4 (Thu): Testing basics
+#### Day 4 (Thu): Two Pointers & Sliding Window
 - Topics
-  - Unit tests for models, views, forms, and API endpoints; fixtures; using Django test client.
+  - Two-pointer technique: when and why it works
+  - Sliding window: fixed and variable size
+  - Time complexity optimization with these patterns
 - Hands-on
-  - Write a small set of tests that cover: creating tasks, permission checks, and one API endpoint.
-  - Add a `Makefile test` target to run tests locally.
+  - Solve 6-8 two-pointer/sliding-window problems from ProblemBank_DSA.md
 - Problem solving
-  - From LeetCode: [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
-  - From LeetCode: [Move Zeroes](https://leetcode.com/problems/move-zeroes/)
+  - Core: Valid Palindrome, Container With Most Water
+  - Stretch: 3Sum, Longest Substring Without Repeating Characters
+  - Challenge: Minimum Window Substring
 - Deliverables
-  - Tests pass locally; basic coverage of critical paths.
+  - Solutions with pattern identification; before/after complexity analysis
 
-#### Day 5 (Fri): Performance and pagination basics
+#### Day 5 (Fri): Trees & Graphs (Intro)
 - Topics
-  - Pagination defaults, basic query optimization (select_related/prefetch_related intro).
+  - Binary tree basics: traversals (inorder, preorder, postorder)
+  - DFS vs BFS: when to use each
+  - Graph representation: adjacency list/matrix
 - Hands-on
-  - Ensure list views and API endpoints are paginated; measure simple before/after queries in shell.
+  - Implement tree traversals (recursive and iterative)
+  - Solve 5-6 tree/graph problems from ProblemBank_DSA.md
 - Problem solving
-  - From LeetCode: [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
-  - From Euler: [Problem 6](https://projecteuler.net/problem=6)
+  - Core: Binary Tree Inorder Traversal, Maximum Depth of Binary Tree
+  - Stretch: Validate Binary Search Tree
+  - Challenge: Number of Islands (DFS/BFS)
 - Deliverables
-  - Paginated endpoints and pages; simple notes on observed query counts.
+  - Traversal implementations with tests; solutions with complexity analysis
 
 ### Weekend assignment
-API-first extension of Task Tracker:
-- Add filtering parameters to `/api/tasks/` (e.g., status, due_date range) and document them in the project README.
-- Write tests for one success and one failure case per endpoint.
-- Ensure the project is easy to set up and run locally with a short, clear README.
-- Quality gate: `black`, `isort`, `pylint` all pass locally.
+**Algorithm Portfolio Project**
+
+Build a comprehensive algorithm library with:
+1. **Implementations**: Stack, Queue, Binary Search, Merge Sort, Tree Traversals
+2. **Tests**: Full pytest suite with edge cases for each algorithm
+3. **Documentation**: 
+   - README with complexity analysis table
+   - Docstrings with examples and Big-O notation
+   - Pattern guide (when to use which algorithm/data structure)
+4. **Problem Solutions**: At least 30 problems from ProblemBank_DSA.md with:
+   - Multiple approaches (brute force → optimized)
+   - Complexity analysis
+   - Pattern identification
+5. **Quality**: `black`, `isort`, `pylint` pass; type hints throughout
+
+**Acceptance criteria:**
+- All implementations tested and working
+- 30+ DSA problems solved with tests
+- Complexity documented for each solution
+- Pattern guide clear and useful
+- Code quality tools pass
+
+### Suggested problems (30-40 total for the week)
+- See `intern_training/ProblemBank_DSA.md` (Core/Stretch/Challenge)
+- Daily quota: 5-8 problems
+- Focus on understanding patterns, not just solving
+
+### Promotion gate (advance to Week 4 if all met)
+- 30+ DSA problems solved with comprehensive tests
+- Algorithm implementations correct and tested
+- Complexity analysis documented and accurate
+- Pattern recognition demonstrated
+- Quality gates pass (`black`, `isort`, `pylint`)
+- Weekend assignment complete with all acceptance criteria
 
 
