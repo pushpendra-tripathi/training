@@ -137,7 +137,7 @@
   - Use tmp_path for file I/O tests
   - Parametrize tests for multiple scenarios
   - Test happy path + error cases
-  - Aim for >90% coverage
+  - Aim for >85% coverage
 - **Performance**: Profile large file processing; use generators for memory efficiency
 - **Logging**: Add structured logging for debugging pipelines
 

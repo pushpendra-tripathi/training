@@ -88,7 +88,7 @@ Django views process data (strings, lists, dicts). Clean Python with type hints 
 - [ ] Ran `black .` and `isort .`, and addressed `pylint` feedback
 - [ ] Functions have clear docstrings and type hints
 - [ ] README updated with commands
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why quality tools matter for Django teams
   - [ ] Documented Python patterns learned (comprehensions, type hints, LEGB scope)

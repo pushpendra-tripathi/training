@@ -39,7 +39,6 @@ Testing is essential for Django applications. Understanding Django's test framew
    - POST requests: self.client.post()
    - Assertions: status_code, templates_used, context
    - Testing redirects
-   - Testing authentication required
 
 4) Form Tests
    - Test valid form data
@@ -81,7 +80,7 @@ Testing is essential for Django applications. Understanding Django's test framew
 - [ ] Coverage >80%
 - [ ] 2+ testing problems solved
 - [ ] Code passes quality tools
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

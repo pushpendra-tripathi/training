@@ -2,7 +2,7 @@
 
 ### Problem Definition (Answer BEFORE starting)
 **What exactly are you building today?**  
-Binary tree implementations with DFS/BFS traversals, BST validation, and 4-5 tree/recursion problems solved.
+Binary tree implementations with DFS/BFS traversals, BST validation, and 4-6 tree/recursion problems solved.
 
 **Why does this matter for Django?**  
 Django's template system and model relationships form tree structures. Understanding recursion and tree traversal helps you work with nested templates, hierarchical categories, and recursive queries.
@@ -61,7 +61,7 @@ Django's template system and model relationships form tree structures. Understan
    - Graph traversal uses same DFS/BFS patterns
    - Visited tracking required (graphs can have cycles)
 
-7) **Problem solving (4-5 problems from ProblemBank_DSA.md - Trees section)**
+7) **Problem solving (4-6 problems from ProblemBank_DSA.md - Trees & Recursion, Graphs sections)**
    - **Core (must solve 3-4)**:
      - Binary Tree Inorder Traversal (recursive)
      - Maximum Depth of Binary Tree
@@ -72,7 +72,7 @@ Django's template system and model relationships form tree structures. Understan
      - Number of Islands (apply DFS/BFS to grid)
 
 ### Problem solving
-- From ProblemBank_DSA.md: Trees & Recursion section (problems 29-35)
+- From ProblemBank_DSA.md: Trees & Recursion section (problems 29-33) plus Number of Islands from the Graphs section (problem 34)
 - **Focus**: Understanding recursion, not memorizing all tree problems
 - **Goal**: Comfortable with recursive thinking, DFS/BFS patterns
 
@@ -88,7 +88,7 @@ Django's template system and model relationships form tree structures. Understan
 - **Binary Tree Inorder Traversal** (recursive) implemented and tested
 - **Maximum Depth** (recursive) implemented and tested
 - **Validate BST** implemented and tested
-- **4-5 tree/recursion problems solved** with:
+- **4-6 tree/recursion problems solved** with:
   - Type hints
   - Docstrings with complexity analysis
   - Tests with edge cases:
@@ -108,12 +108,12 @@ Django's template system and model relationships form tree structures. Understan
 - [ ] Inorder traversal (recursive) working
 - [ ] Maximum depth (recursive) working
 - [ ] Validate BST working correctly
-- [ ] 4-5 tree/recursion problems solved
+- [ ] 4-6 tree/recursion problems solved
 - [ ] Recursion patterns documented
 - [ ] Tests cover edge cases
 - [ ] Complexity documented for solutions
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

@@ -24,13 +24,14 @@ Implement with comprehensive tests:
 - **Quick Sort** (optional)
 - **Tree Traversals** (DFS: inorder, preorder, postorder; BFS)
 
-#### 3. Problem Solutions (Minimum 30 from ProblemBank_DSA.md)
+#### 3. Problem Solutions (Minimum 28 from ProblemBank_DSA.md)
 Solve and document:
-- **Arrays & Hash Tables**: 8+ problems
-- **Stacks & Queues**: 6+ problems
-- **Sorting & Searching**: 6+ problems
-- **Two Pointers & Sliding Window**: 6+ problems
-- **Trees & Graphs**: 4+ problems
+- **Arrays & Strings + Hash Tables & Sets**: 8+ problems (of 10 available)
+- **Stacks & Queues**: 5 problems (the full section)
+- **Sorting & Searching**: 4 problems (the full section)
+- **Two Pointers & Sliding Window**: 5 problems (the full section)
+- **Trees & Graphs**: 4+ problems (of 7 available)
+- **Linked Lists** (bonus, not covered in daily lessons): 2+ problems (of 4 available)
 
 Each solution must include:
 - Multiple approaches (brute force → optimized)
@@ -58,7 +59,7 @@ Create comprehensive README with:
 - **Setup Instructions**: How to run tests
 
 #### 5. Testing
-- pytest suite with >95% coverage
+- pytest suite with >85% coverage
 - Parametrized tests for variations
 - Edge case coverage:
   - Empty inputs
@@ -113,14 +114,14 @@ week03/
 ### Acceptance Criteria
 - [ ] All core data structures implemented and tested
 - [ ] All core algorithms implemented and tested
-- [ ] **30+ problems** solved from ProblemBank_DSA.md
+- [ ] **28+ problems** solved from ProblemBank_DSA.md
 - [ ] Each solution has:
   - [ ] Multiple approaches (where applicable)
   - [ ] Complexity analysis
   - [ ] Comprehensive tests
   - [ ] Type hints and docstrings
 - [ ] README with complexity table and pattern guide
-- [ ] Test coverage >95%
+- [ ] Test coverage >85%
 - [ ] All code passes quality tools (`black`, `isort`, `pylint`)
 - [ ] Pattern guide is clear and useful
 - [ ] Examples demonstrate understanding
@@ -128,10 +129,10 @@ week03/
 ### Promotion Gate
 To advance to Week 4, you must:
 - ✅ Complete all acceptance criteria above
-- ✅ Solve minimum 30 DSA problems with tests
+- ✅ Solve minimum 28 DSA problems with tests
 - ✅ Document complexity for all implementations
 - ✅ Demonstrate pattern mastery in pattern guide
-- ✅ Achieve test coverage >95%
+- ✅ Achieve test coverage >85%
 - ✅ Pass code quality gates
 
 ### Tips

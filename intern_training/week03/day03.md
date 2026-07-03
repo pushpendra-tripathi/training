@@ -2,7 +2,7 @@
 
 ### Problem Definition (Answer BEFORE starting)
 **What exactly are you building today?**  
-Binary search and merge sort implementations from scratch, plus 6-8 problems using search and sort algorithms.
+Binary search and merge sort implementations from scratch, plus 4-5 problems using search and sort algorithms.
 
 **Why does this matter for Django?**  
 Django querysets support ordering and filtering. Understanding sorting algorithms and binary search helps you optimize database queries with indexes and understand query performance.
@@ -34,20 +34,18 @@ Django querysets support ordering and filtering. Understanding sorting algorithm
    - Sorting first vs. using hash table
    - Trade-offs: time vs. space
 
-4) Problem solving (6-8 problems from ProblemBank_DSA.md)
+4) Problem solving (4-5 problems from ProblemBank_DSA.md)
    - **Core (must solve)**:
      - Binary Search
-     - Merge Sorted Arrays
      - Merge Sort Implementation
+     - Merge Sorted Arrays
    - **Stretch**:
      - Search in Rotated Sorted Array
      - Quick Select (Kth Largest Element)
-     - Find First and Last Position in Sorted Array
-   - **Challenge**:
-     - Median of Two Sorted Arrays (bonus)
+   - **Note**: The Sorting & Searching section has only 4 problems; Merge Sorted Arrays is cross-listed from Arrays & Strings. This day has no Challenge-tier problem in the bank — use spare time for the algorithm implementations instead.
 
 ### Problem solving
-- From ProblemBank_DSA.md: Sorting & Searching section
+- From ProblemBank_DSA.md: Sorting & Searching section, plus Merge Sorted Arrays from Arrays & Strings
 - Document algorithm choices and why
 
 ### Outcomes
@@ -59,7 +57,7 @@ Django querysets support ordering and filtering. Understanding sorting algorithm
 - Binary search implementation (iterative + recursive) with tests
 - Merge sort implementation with tests
 - Quick sort implementation (optional)
-- 6-8 problems solved with:
+- 4-5 problems solved with:
   - Type hints
   - Complexity analysis comparison (brute force vs. optimized)
   - Algorithm choice justification
@@ -68,10 +66,10 @@ Django querysets support ordering and filtering. Understanding sorting algorithm
 ### Submission checklist
 - [ ] Binary search implemented correctly
 - [ ] Merge sort working with tests
-- [ ] 6+ sorting/searching problems solved
+- [ ] 4+ sorting/searching problems solved
 - [ ] Complexity comparisons documented
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

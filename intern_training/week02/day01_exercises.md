@@ -219,44 +219,45 @@ class ShoppingCart:
 
 ## Testing Your OOP Code
 
-Create `tests/test_oop.py`:
+Create `tests/test_oop.py` (pytest style — this is the standard for the rest of the week):
 ```python
-import unittest
-from datetime import date
+import pytest
 
-class TestTask(unittest.TestCase):
+
+class TestTask:
     def test_task_creation(self):
         task = Task("Test", "Description")
-        self.assertEqual(task.status, "todo")
-    
+        assert task.status == "todo"
+
     def test_empty_title_raises_error(self):
-        with self.assertRaises(ValueError):
+        with pytest.raises(ValueError):
             Task("", "Description")
-    
+
     def test_status_transition(self):
         task = Task("Test", "Desc")
         task.transition_to("in_progress")
-        self.assertEqual(task.status, "in_progress")
-    
+        assert task.status == "in_progress"
+
     def test_invalid_transition_raises_error(self):
         task = Task("Test", "Desc")
-        with self.assertRaises(ValueError):
+        with pytest.raises(ValueError):
             task.transition_to("done")  # Can't go from todo to done directly
 
-class TestTaskManager(unittest.TestCase):
-    def setUp(self):
-        self.manager = TaskManager()
-        self.task1 = Task("Task 1", "First task")
-        self.task2 = Task("Task 2", "Second task")
-    
-    def test_add_task(self):
-        self.manager.add_task(self.task1)
-        self.assertEqual(len(self.manager), 1)
-    
-    # Add more tests...
 
-if __name__ == "__main__":
-    unittest.main()
+class TestTaskManager:
+    @pytest.fixture
+    def manager(self):
+        return TaskManager()
+
+    @pytest.fixture
+    def task1(self):
+        return Task("Task 1", "First task")
+
+    def test_add_task(self, manager, task1):
+        manager.add_task(task1)
+        assert len(manager) == 1
+
+    # Add more tests...
 ```
 
 ## Success Criteria

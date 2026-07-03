@@ -38,7 +38,7 @@ Django applications grow complex quickly. Learning to refactor for clarity and w
 - [ ] Tests cover edge and error cases
 - [ ] `make test` works
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

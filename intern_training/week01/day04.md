@@ -51,7 +51,7 @@ Django projects are Python packages. Understanding packaging, entry points, and 
 - [ ] Running `python -m energy_insights --help` shows usage
 - [ ] Makefile targets work on a fresh clone
 - [ ] Code formatted (`black`/`isort`) and linted (`pylint`)
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why Python packaging matters for Django
   - [ ] Documented packaging patterns and Makefile automation benefits

@@ -30,7 +30,7 @@
   - From Project Euler: [Problem 3](https://projecteuler.net/problem=3)
   - From LeetCode: [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 - Deliverables
-  - Static site folder with `index.html`, `styles.css`, and a small `app.js`.
+  - Robust I/O helpers (CSV/JSON) with validation and custom exceptions; format/lint clean.
 
 #### Day 3 (Wed): Testing with pytest
 - Topics
@@ -40,7 +40,7 @@
 - Problem solving
   - From LeetCode: [Ransom Note](https://leetcode.com/problems/ransom-note/), [Plus One](https://leetcode.com/problems/plus-one/)
 - Deliverables
-  - `runserver` works; pages render; committed with clear messages.
+  - `tests/` with passing pytest suite (fixtures + parametrized cases); `make test` target works.
 
 #### Day 4 (Thu): Packaging and CLI ergonomics
 - Topics
@@ -51,7 +51,7 @@
   - From LeetCode: [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
   - From Euler: [Problem 4](https://projecteuler.net/problem=4)
 - Deliverables
-  - CRUD flow works end-to-end; screenshots in README.
+  - CLI with subcommands, helpful `--help`, and correct exit codes; README usage examples updated.
 
 #### Day 5 (Fri): Refactor and test hard cases
 - Topics
@@ -62,7 +62,7 @@
   - From LeetCode: [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
   - From LeetCode: [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 - Deliverables
-  - Polished UI with template inheritance and messaging; format/lint clean.
+  - Refactored code with tests covering error paths and boundary inputs; `make test` green; format/lint clean.
 
 ### Weekend assignment
 Finalize your Python package:

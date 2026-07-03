@@ -14,7 +14,7 @@ A working CLI that processes valid CSVs AND handles invalid inputs with clear er
 
 ### Objectives
 - Use conditionals, loops, exceptions, and context managers effectively.
-- Read/write CSV and JSON files; build a CLI script with arguments.
+- Read/write CSV files; build a CLI script with arguments.
 
 ### Prerequisites
 - Day 2 utilities; local black/isort/pylint available.
@@ -28,12 +28,12 @@ A working CLI that processes valid CSVs AND handles invalid inputs with clear er
    - **Context managers**: `with` statement, understanding `__enter__` and `__exit__`
    - Practice: Implement safe parsing and error handling with `try/except` and early returns.
 2) CSV stats script (simple CLI)
-   - Create `tools/csv_stats.py` with **basic** CLI args: `--file <path>`, `--top <n>`, `--column <name>`.
+   - Create `tools/csv_stats.py` with **basic** CLI args: `--file <path>`, `--top <n>`, `--metric <name>`.
    - Output: row count, numeric column summary (min/max/mean), and top-N rows by the selected column.
    - Use `argparse` for simple argument parsing (no subcommands, logging, or config - just basics).
    - Use `pathlib` for file handling.
-   - Use sample input: `intern_training/data/energy/hourly_prices.csv` with `--column price`.
-   - **Note**: This is a simple introduction to argparse; Week 4 will cover professional CLI design.
+   - Use sample input: `intern_training/data/energy/hourly_prices.csv` with `--metric price`.
+   - **Note**: This is a simple introduction to argparse; Week 2 Day 4 adds subcommands and packaging, and Week 4 Day 3 covers professional CLI design (config management, logging, mutually exclusive groups).
    - Function specs
      - `load_csv(file_path: str) -> list[dict[str, str]]`
        - Input: path to CSV
@@ -61,7 +61,7 @@ A working CLI that processes valid CSVs AND handles invalid inputs with clear er
 - [ ] CLI accepts args and prints results
 - [ ] Handles missing files/columns with helpful errors
 - [ ] Formatted and linted cleanly
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Execution log maintained
   - [ ] Learning reflection documented

@@ -32,6 +32,7 @@ Models are the foundation of Django apps. Understanding fields, relationships, m
      - title (CharField, max_length=200)
      - description (TextField, blank=True)
      - status (CharField with choices: TODO, IN_PROGRESS, DONE)
+     - priority (CharField with choices: LOW, MEDIUM, HIGH; default MEDIUM)
      - due_date (DateField, null=True, blank=True)
      - created_at (DateTimeField, auto_now_add=True)
      - updated_at (DateTimeField, auto_now=True)
@@ -86,7 +87,7 @@ Models are the foundation of Django apps. Understanding fields, relationships, m
 - [ ] QuerySet practice documented
 - [ ] 3+ model problems solved
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

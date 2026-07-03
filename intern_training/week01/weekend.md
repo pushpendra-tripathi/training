@@ -15,25 +15,26 @@ The tool should be user-friendly, handle errors gracefully, and produce clear, f
 ### Input Specification
 - **Sample file**: `intern_training/data/energy/hourly_prices.csv`
 - **CSV format**: Contains columns `timestamp` (ISO format) and `price` (float)
-- **Example row**: `2022-01-01T00:00:00,45.23`
+- **Example row**: `2025-09-30T00:00:00Z,38.4`
+- **Note**: The shipped sample covers a single day (24 hourly rows). Your daily-averages table will show one row against this file — test multi-day grouping with a CSV of your own that spans several days.
 
 ### Expected Output
-Your CLI should produce:
+Your CLI should produce (using the shipped sample file):
 1. **Daily Averages**: Table showing date and average price per day
    ```
    Date         Avg Price
-   2022-01-01   $42.15
-   2022-01-02   $38.92
+   2025-09-30   $49.52
    ```
 2. **Top N Spikes**: Highest prices with timestamps
    ```
-   Top 10 Price Spikes:
-   2022-01-15T14:00:00  $125.50
-   2022-02-03T18:00:00  $118.25
+   Top 3 Price Spikes:
+   2025-09-30T17:00:00Z  $63.90
+   2025-09-30T07:00:00Z  $61.00
+   2025-09-30T16:00:00Z  $60.20
    ```
 3. **Anomaly Detection**: Identify outliers using z-score (>2) or 95th percentile
    ```
-   Anomalies detected: 12 hours
+   Anomalies detected: 1 hour (95th percentile threshold)
    ```
 
 ### Command-Line Interface
@@ -44,7 +45,7 @@ Your CLI should produce:
 
 ### Example Usage
 ```bash
-python -m energy_insights --file data/hourly_prices.csv --metric price --top 5
+python -m energy_insights --file intern_training/data/energy/hourly_prices.csv --metric price --top 3
 ```
 
 ### Step-by-step tasks
@@ -73,7 +74,7 @@ python -m energy_insights --file data/hourly_prices.csv --metric price --top 5
 
 ### Submission checklist
 - [ ] Works from a fresh clone with documented steps
-- [ ] Handles bad inputs gracefully (missing file/column)A
+- [ ] Handles bad inputs gracefully (missing file/column)
 - [ ] Clear, formatted output and simple code structure
 
 

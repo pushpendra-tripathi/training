@@ -9,7 +9,7 @@ This folder contains a complete, self-contained Django intern training package w
 - **[DAILY_TEMPLATE.md](intern_training/DAILY_TEMPLATE.md)** - Daily workflow template (Polya's method)
 - **This README** - Setup, daily index, and submission guidelines
 
-These plans are standalone; existing `modules/*` in this repo can be used as optional references.
+These plans are standalone.
 
 ---
 
@@ -68,7 +68,7 @@ This pacing dedicates 4 weeks to fundamentals before Django, ensuring solid foun
 - Linux, Git, shell workflows
 - Python: data types, control flow, functions, modules
 - Tooling: `black`, `isort`, `pylint`, type hints
-- Problem-solving: 25-35 problems from ProblemBank_Python.md
+- Problem-solving: 20-25 problems from ProblemBank_Python.md
 - Weekend: Energy Insights CLI
 
 **Week 2 — Python Advanced + OOP**
@@ -76,7 +76,7 @@ This pacing dedicates 4 weeks to fundamentals before Django, ensuring solid foun
 - Dataclasses, encapsulation, design patterns
 - Exceptions, file I/O, CSV/JSON processing
 - Packaging and module organization
-- Problem-solving: 20-25 problems from ProblemBank_OOP.md
+- Problem-solving: 15-18 problems from ProblemBank_OOP.md
 - Weekend: Refactored package with OOP design
 
 **Week 3 — Data Structures & Algorithms**
@@ -84,7 +84,7 @@ This pacing dedicates 4 weeks to fundamentals before Django, ensuring solid foun
 - Sorting, searching, two pointers, sliding window
 - Trees and graphs basics
 - Time/space complexity analysis
-- Problem-solving: 30-40 problems from ProblemBank_DSA.md
+- Problem-solving: 25-35 problems from ProblemBank_DSA.md
 - Weekend: Algorithm implementations with tests
 
 **Week 4 — Testing + Data Engineering**
@@ -92,7 +92,7 @@ This pacing dedicates 4 weeks to fundamentals before Django, ensuring solid foun
 - Data validation and ETL pipelines
 - CLI tools with argparse
 - HTTP/REST basics, Python `requests`
-- Problem-solving: 15-20 problems from ProblemBank_DataHandling.md
+- Problem-solving: 12-15 problems from ProblemBank_DataHandling.md
 - Weekend: Complete data pipeline with tests
 
 **Week 5 — Django Foundations**
@@ -101,7 +101,7 @@ This pacing dedicates 4 weeks to fundamentals before Django, ensuring solid foun
 - URL routing, FBVs/CBVs, templates
 - Forms, validation, CRUD operations
 - Admin customization
-- Problem-solving: 15-20 problems from ProblemBank_Django.md (models/views)
+- Problem-solving: 15-19 problems from ProblemBank_Django.md (models/views/forms/admin)
 - Weekend: Task Tracker CRUD app
 
 **Week 6 — Django Advanced + Integration**
@@ -109,9 +109,10 @@ This pacing dedicates 4 weeks to fundamentals before Django, ensuring solid foun
 - Form validation, messages framework
 - Pagination, search, filtering
 - Django testing (models/views/forms)
-- DRF basics (optional): simple REST API
-- Problem-solving: 10-15 problems from ProblemBank_Django.md (auth/API/testing)
-- Weekend: Production-ready Django app with auth + tests
+- REST API with Django REST Framework
+- Frontend integration with the API
+- Problem-solving: 10-14 problems from ProblemBank_Django.md (auth/API/testing)
+- Weekend: Full-stack Django app with auth, REST API, and frontend
 
 ### What you will need
 - Python 3.12+
@@ -139,11 +140,11 @@ black . && isort . && pylint **/*.py || true
 
 ### How to use these plans
 - Follow the weekly plan above; each week has a corresponding `intern_training/weekXX.md` file with daily details.
-- **Daily quota**: Solve 5-7 problems per day from the relevant Problem Bank (mix of Core, Stretch, Challenge).
+- **Daily quota**: See each week's overview for its exact pace (ranges from 2-3 to 6-8 problems/day depending on problem density that week); mix of Core, Stretch, Challenge.
 - Every day includes: topics, hands-on tasks, problem-solving with tests, and deliverables.
 - Weekends have a focused project assignment to consolidate the week's learning with **acceptance criteria** (promotion gate).
 - Keep a daily log (`LEARNING.md`) of insights, gotchas, problem solutions, and links to your PRs.
-- **Total problems**: 115-145 curated problems across 6 weeks.
+- **Total problems**: 97-126 curated problems across 6 weeks (sum of each week's range above).
 
 ### Weekly index (6-week plan)
 - [week01.md](intern_training/week01.md): Systems + Python Basics
@@ -163,33 +164,31 @@ Use the per‑day plans under `intern_training/weekXX/` for granular tasks. All 
 - CSV for data tasks
   - File: `data/energy/hourly_prices.csv` (columns: `timestamp`, `price`)
   - Used in Week 1 Day 3 and Weekend CLI
-- JSON for web basics
+- JSON sample data (optional)
   - File: `data/web/energy_stats.json`
-  - Used in Week 2 Day 2 (render via JS)
-- Frontend template (bonus Week 5)
+  - Not required by any graded task; use as an offline alternative to a public API in Week 4 Day 4 if you'd rather not depend on network access
+- Frontend template (Week 6)
   - Directory: `frontend_template/` (index.html, styles.css, js/)
-  - Used to scaffold the Week 5 frontend
+  - Used to scaffold the Week 6 Day 5 frontend
 
 ### Practice exercises (supplemental)
 - `intern_training/week01/day02_exercises.md`: Python fundamentals practice (optional)
 - `week02/day01_exercises.md`: OOP fundamentals practice (mandatory for Week 2 gate)
 
-### Problem banks (115 curated problems)
+### Problem banks (127 curated problems)
 - **[ProblemBank_Python.md](intern_training/ProblemBank_Python.md)**: 25 problems (strings, lists, dicts, comprehensions, functions, file I/O)
 - **[ProblemBank_OOP.md](intern_training/ProblemBank_OOP.md)**: 18 problems (classes, inheritance, composition, design patterns)
 - **[ProblemBank_DSA.md](intern_training/ProblemBank_DSA.md)**: **35 problems** (arrays, stacks, queues, sorting, searching, two-pointers, sliding window, **5 core tree/recursion problems**, 2 graphs)
 - **[ProblemBank_DataHandling.md](intern_training/ProblemBank_DataHandling.md)**: 15 problems (CSV/JSON processing, ETL pipelines, validation, testing)
-- **[ProblemBank_Django.md](intern_training/ProblemBank_Django.md)**: 22 problems (models, views, forms, templates, admin, testing)
+- **[ProblemBank_Django.md](intern_training/ProblemBank_Django.md)**: 34 problems (models, views, forms, templates, admin, auth, REST API, testing)
 
-**Total: 115 problems** with sample inputs/outputs and complexity guidance.
+**Total: 127 problems** with sample inputs/outputs and complexity guidance.
 
 **Bonus**: ProblemBank_DSA.md includes 21 additional **advanced/optional problems** for interview prep (not required for program).
 
-**Note**: Legacy problem banks (ProblemBank_A, ProblemBank_B) have been removed. Use the new Problem Banks listed above.
-
 **Structure**: Core (must), Stretch (nice), Challenge (bonus) for each bank.
 
-**Daily quota**: 5-7 problems/day; submit solutions with tests and type hints; document learnings in `LEARNING.md`.
+**Daily quota**: See each week's overview for its exact pace; submit solutions with tests and type hints; document learnings in `LEARNING.md`.
 
 **Legacy exercise files** (still available):
 - `intern_training/week01/day02_exercises.md`: Python fundamentals practice

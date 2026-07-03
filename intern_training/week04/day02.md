@@ -173,7 +173,7 @@ Django ORM abstracts SQL, but understanding database design, normalization, cons
 - [ ] 3+ data handling problems solved
 - [ ] Test coverage >85%
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

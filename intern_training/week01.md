@@ -36,10 +36,10 @@
 #### Day 3 (Wed): Control flow, errors, files
 - Topics
   - Conditionals, loops, exceptions, context managers.
-  - `pathlib`, JSON/CSV read/write.
+  - `pathlib`, CSV read/write (JSON comes in Week 2).
 - Hands-on
   - Build `tools/csv_stats.py` that loads a CSV and prints: row count, column summaries, top-N by a numeric column.
-  - Add a `--file` and `--top` argument, and a basic usage example in README.
+  - Add `--file`, `--top`, and `--metric` arguments, and a basic usage example in README.
 - Problem solving
   - From LeetCode Easy/Medium: [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/), [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 - Deliverables

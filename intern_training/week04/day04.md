@@ -2,7 +2,7 @@
 
 ### Problem Definition (Answer BEFORE starting)
 **What exactly are you building today?**  
-A robust API client with error handling, retry logic, and rate limiting, plus a static web page rendering API data.
+A robust API client with error handling, retry logic, and rate limiting.
 
 **Why does this matter for Django?**  
 Django often consumes external APIs and provides REST APIs. Understanding HTTP, requests, and error handling prepares you for building Django views that interact with third-party services.
@@ -10,7 +10,7 @@ Django often consumes external APIs and provides REST APIs. Understanding HTTP, 
 **What does success look like?**  
 - API client with comprehensive error handling (network, HTTP)
 - Retry logic with exponential backoff
-- Static page rendering API data with loading/error states
+- CLI output that pretty-prints the fetched data
 
 ---
 
@@ -57,7 +57,7 @@ Django often consumes external APIs and provides REST APIs. Understanding HTTP, 
      - Handle pagination
      - Error handling and retries
      - Rate limit awareness
-   - Create simple static page rendering API data (reuse week02 web basics)
+   - Pretty-print fetched data to the terminal (table or formatted JSON)
    - Mock API responses in tests
 
 7) Problem solving
@@ -78,10 +78,7 @@ Django often consumes external APIs and provides REST APIs. Understanding HTTP, 
   - Rate limiting awareness
   - Session for efficiency
   - Comprehensive tests (using `responses` library for mocking)
-- Static web page:
-  - Renders API data with JavaScript
-  - Shows loading/error states
-  - Uses provided `frontend_template/`
+  - CLI output pretty-prints fetched data
 - Example usage and output
 
 ### Submission checklist
@@ -89,9 +86,9 @@ Django often consumes external APIs and provides REST APIs. Understanding HTTP, 
 - [ ] Error handling comprehensive
 - [ ] Retry logic implemented
 - [ ] Tests with mocked API responses
-- [ ] Static page renders API data
+- [ ] CLI output pretty-prints fetched data
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

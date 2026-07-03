@@ -55,7 +55,7 @@ Django deploys on Linux servers. You must navigate filesystems, manage permissio
 - [ ] Script executable and works for a sample folder
 - [ ] Clear usage in README (inputs, outputs, retention policy)
 - [ ] PR opened with descriptive title and body
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why Linux/Git matter for Django
   - [ ] Documented what was learned about permissions, archiving, Git workflow

@@ -44,7 +44,7 @@ Django QuerySets can be inefficient if not optimized. Understanding algorithmic 
      - Trapping Rain Water (bonus)
 
 ### Problem solving
-- From ProblemBank_DSA.md: Two Pointers & Sliding Window sections
+- From ProblemBank_DSA.md: Two Pointers & Sliding Window section, plus two cross-listed array problems (Maximum Subarray, Best Time to Buy and Sell Stock)
 - Focus on pattern recognition and optimization
 
 ### Outcomes
@@ -69,7 +69,7 @@ Django QuerySets can be inefficient if not optimized. Understanding algorithmic 
 - [ ] Optimization documented (O(n²) → O(n))
 - [ ] All solutions tested
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

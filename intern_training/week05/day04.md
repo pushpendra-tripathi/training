@@ -76,7 +76,7 @@ Forms and validation are critical for data integrity. The Django admin is a powe
 - [ ] Custom admin action implemented
 - [ ] 3+ form/admin problems solved
 - [ ] Code passes quality tools
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

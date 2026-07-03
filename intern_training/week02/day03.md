@@ -29,7 +29,7 @@ Django projects require extensive testing. Understanding pytest fixtures, parame
 
 ### Expected Result
 - Tests run and pass; failures provide clear diagnostics.
-- All URLs use Django's URL namespacing and named patterns
+- Parametrized cases cover edge cases for the I/O helpers.
 
 ### Problem solving
 - LeetCode: [Ransom Note](https://leetcode.com/problems/ransom-note/), [Plus One](https://leetcode.com/problems/plus-one/)
@@ -44,7 +44,7 @@ Django projects require extensive testing. Understanding pytest fixtures, parame
 - [ ] Tests cover happy/sad paths
 - [ ] `make test` works on a clean clone
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

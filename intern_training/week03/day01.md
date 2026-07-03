@@ -40,10 +40,10 @@ Django ORM querysets use hash-based lookups extensively. Understanding hash tabl
      - First Non-Repeating Character
      - Intersection of Two Arrays
    - **Challenge**:
-     - Top K Frequent Elements (bonus)
+     - Product of Array Except Self (bonus)
 
 ### Problem solving
-- From ProblemBank_DSA.md: Arrays & Hash Tables section
+- From ProblemBank_DSA.md: Arrays & Strings, Hash Tables & Sets sections
 - Document patterns observed
 
 ### Outcomes
@@ -64,7 +64,7 @@ Django ORM querysets use hash-based lookups extensively. Understanding hash tabl
 - [ ] 5+ array/hashmap problems solved
 - [ ] Complexity documented for each solution
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

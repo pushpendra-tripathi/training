@@ -76,7 +76,7 @@ Modern Django applications often provide REST APIs. Understanding DRF serializer
 - [ ] API tests passing
 - [ ] 2+ DRF problems solved
 - [ ] Code passes quality tools
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

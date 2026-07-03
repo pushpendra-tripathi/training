@@ -1,6 +1,6 @@
 ## Problem Bank — Data Structures & Algorithms (35 problems)
 
-**Target**: Week 3. Pick 6-8 problems daily; focus on patterns and complexity analysis.
+**Target**: Week 3. Daily pace varies with section size (4-8 problems/day — see week03.md for the exact breakdown); focus on patterns and complexity analysis.
 
 **Problem Breakdown**:
 - Arrays & Strings: 6 problems

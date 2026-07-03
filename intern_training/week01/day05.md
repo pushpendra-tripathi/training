@@ -60,7 +60,7 @@ Django projects require tests for confidence in changes. Refactoring skills prev
 - [ ] Tests pass locally
 - [ ] Refactor did not change behavior (unless intended and documented)
 - [ ] Formatting/linting clean
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why testing and refactoring matter for Django teams
   - [ ] Documented testing patterns learned and refactoring techniques applied

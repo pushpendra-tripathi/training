@@ -24,7 +24,7 @@
   - Core: Fixture factory pattern, parametrize CSV validation
   - Stretch: Property-based tests for data transforms
 - Deliverables
-  - Comprehensive test suite with >90% coverage; fixtures documented
+  - Comprehensive test suite with >85% coverage; fixtures documented
 
 #### Day 2 (Tue): Database Fundamentals + Data Validation
 - Topics
@@ -75,12 +75,12 @@
 - Hands-on
   - Build script to consume public API (weather, GitHub, etc.)
   - Handle rate limiting, retries, timeouts
-  - Create simple web page rendering JSON (from Week 2 materials)
+  - Pretty-print fetched data to the terminal
 - Problem solving
   - Consume API and transform data
   - Error handling for network issues
 - Deliverables
-  - API client with error handling; static page rendering API data
+  - API client with error handling; CLI output pretty-prints fetched data
 
 #### Day 5 (Fri): Performance Optimization & Code Quality
 - Topics
@@ -121,7 +121,7 @@ Build a production-grade ETL pipeline:
    - Unit tests for each transform
    - Integration tests for full pipeline
    - Property-based tests where applicable
-   - >90% coverage
+   - >85% coverage
 6. **Documentation**:
    - Comprehensive README
    - Architecture diagram
@@ -130,21 +130,21 @@ Build a production-grade ETL pipeline:
 
 **Acceptance criteria:**
 - Pipeline processes real data correctly
-- 15+ data handling problems solved from ProblemBank
+- 12+ data handling problems solved from ProblemBank
 - Comprehensive test suite (unit + integration)
 - CLI is professional and user-friendly
 - Error handling is robust and informative
 - Documentation is clear and complete
 - Code quality tools pass
 
-### Suggested problems (15-20 total for the week)
+### Suggested problems (12-15 total for the week)
 - See `intern_training/ProblemBank_DataHandling.md` (Core/Stretch/Challenge)
 - Daily quota: 3-5 problems (focus on quality and testing depth)
 
 ### Promotion gate (advance to Week 5 if all met)
 - ETL pipeline functional and tested
-- 15+ data handling problems solved
-- Test coverage >90%
+- 12+ data handling problems solved
+- Test coverage >85%
 - HTTP/REST concepts demonstrated
 - CLI tools professional-grade
 - Weekend assignment complete with all criteria

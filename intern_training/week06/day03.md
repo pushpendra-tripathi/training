@@ -78,7 +78,7 @@ Real applications need scalable list views. Understanding pagination, Q objects 
 - [ ] URL params preserved
 - [ ] 2+ problems solved
 - [ ] Code passes quality tools
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

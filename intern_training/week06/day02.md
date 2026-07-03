@@ -78,7 +78,7 @@ Complex forms require sophisticated validation. Understanding formsets and advan
 - [ ] Error display clear and helpful
 - [ ] 2+ form problems solved
 - [ ] Code passes quality tools
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

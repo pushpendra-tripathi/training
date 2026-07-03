@@ -123,7 +123,7 @@ Django apps handling large datasets need optimization. Understanding profiling, 
 - [ ] All tests passing
 - [ ] Performance report created
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them
@@ -132,6 +132,6 @@ Django apps handling large datasets need optimization. Understanding profiling, 
 - **Focus on real bottlenecks**, not premature optimization
 - **Measure before and after** - don't guess
 - **Generators** are powerful for memory, but add complexity - use when needed
-- **Unit tests > integration tests** for this program - keep tests simple and focused
+- **Favor unit tests day-to-day** - keep most tests simple and focused; save integration tests for the weekend's end-to-end pipeline flow
 
 

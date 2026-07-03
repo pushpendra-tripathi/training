@@ -126,7 +126,7 @@
 - Write type hints for all functions
 - Add docstrings with examples and complexity notes
 - Test happy path + at least 2 edge cases per problem
-- Use `pytest` and aim for >90% coverage
+- Use `pytest` and aim for >85% coverage
 - Prefer pure functions (no side effects) where possible
 
 

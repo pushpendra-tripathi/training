@@ -17,9 +17,10 @@
 - Hands-on
   - Implement hash table from scratch (simple version)
   - Solve 5-7 array/hashmap problems from ProblemBank_DSA.md
-- Problem solving (from ProblemBank_DSA.md)
+- Problem solving (from ProblemBank_DSA.md: Arrays & Strings, Hash Tables & Sets sections)
   - Core: Two Sum, Contains Duplicate, Valid Anagram
-  - Stretch: Group Anagrams, First Non-Repeating Character
+  - Stretch: Group Anagrams, First Non-Repeating Character, Intersection of Two Arrays
+  - Challenge: Product of Array Except Self (bonus)
 - Deliverables
   - Solutions with tests; complexity analysis in docstrings; patterns documented
 
@@ -30,10 +31,11 @@
   - Monotonic stack/queue patterns
 - Hands-on
   - Implement stack and queue using lists
-  - Solve 5-7 stack/queue problems from ProblemBank_DSA.md
-- Problem solving
-  - Core: Valid Parentheses, Min Stack
-  - Stretch: Daily Temperatures, Implement Queue using Stacks
+  - Solve 5 stack/queue problems from ProblemBank_DSA.md (the full section)
+- Problem solving (from ProblemBank_DSA.md: Stacks & Queues section)
+  - Core: Valid Parentheses, Min Stack, Implement Queue using Stacks
+  - Stretch: Daily Temperatures, Evaluate Reverse Polish Notation
+  - Challenge: Largest Rectangle in Histogram (bonus, from the optional advanced section)
 - Deliverables
   - Implementations with tests; problem solutions with complexity notes
 
@@ -44,10 +46,10 @@
   - When to sort vs. when to use other approaches
 - Hands-on
   - Implement binary search, merge sort from scratch
-  - Solve 5-7 sorting/searching problems from ProblemBank_DSA.md
-- Problem solving
-  - Core: Binary Search, Merge Sorted Arrays
-  - Stretch: Search in Rotated Sorted Array, Kth Largest Element
+  - Solve 4-5 sorting/searching problems from ProblemBank_DSA.md (the section has 4, plus one cross-listed array problem)
+- Problem solving (from ProblemBank_DSA.md: Sorting & Searching section, plus Merge Sorted Arrays from Arrays & Strings)
+  - Core: Binary Search, Merge Sort Implementation, Merge Sorted Arrays
+  - Stretch: Search in Rotated Sorted Array, Quick Select (Kth Largest Element)
 - Deliverables
   - Algorithm implementations with tests; complexity comparisons documented
 
@@ -58,25 +60,25 @@
   - Time complexity optimization with these patterns
 - Hands-on
   - Solve 6-8 two-pointer/sliding-window problems from ProblemBank_DSA.md
-- Problem solving
-  - Core: Valid Palindrome, Container With Most Water
-  - Stretch: 3Sum, Longest Substring Without Repeating Characters
-  - Challenge: Minimum Window Substring
+- Problem solving (from ProblemBank_DSA.md: Two Pointers & Sliding Window section, plus two cross-listed array problems)
+  - Core: Valid Palindrome, Container With Most Water, Maximum Subarray (Kadane's)
+  - Stretch: 3Sum, Longest Substring Without Repeating Characters, Best Time to Buy and Sell Stock
+  - Challenge: Minimum Window Substring, Trapping Rain Water (bonus, from the optional advanced section)
 - Deliverables
   - Solutions with pattern identification; before/after complexity analysis
 
-#### Day 5 (Fri): Trees & Graphs (Intro)
+#### Day 5 (Fri): Trees, Recursion & Graph Basics
 - Topics
-  - Binary tree basics: traversals (inorder, preorder, postorder)
+  - Binary tree basics: recursive inorder traversal; level-order (BFS) traversal
   - DFS vs BFS: when to use each
   - Graph representation: adjacency list/matrix
+  - **Note**: Preorder/postorder and iterative traversals are optional advanced problems, not core to this day
 - Hands-on
-  - Implement tree traversals (recursive and iterative)
-  - Solve 5-6 tree/graph problems from ProblemBank_DSA.md
-- Problem solving
-  - Core: Binary Tree Inorder Traversal, Maximum Depth of Binary Tree
-  - Stretch: Validate Binary Search Tree
-  - Challenge: Number of Islands (DFS/BFS)
+  - Implement inorder (recursive) and level-order (BFS) traversals
+  - Solve 4-6 tree/graph problems from ProblemBank_DSA.md
+- Problem solving (from ProblemBank_DSA.md: Trees & Recursion, Graphs sections)
+  - Core: Binary Tree Inorder Traversal, Maximum Depth of Binary Tree, Validate Binary Search Tree, Invert Binary Tree
+  - Stretch: Binary Tree Level Order Traversal (BFS), Number of Islands (DFS/BFS)
 - Deliverables
   - Traversal implementations with tests; solutions with complexity analysis
 
@@ -86,11 +88,11 @@
 Build a comprehensive algorithm library with:
 1. **Implementations**: Stack, Queue, Binary Search, Merge Sort, Tree Traversals
 2. **Tests**: Full pytest suite with edge cases for each algorithm
-3. **Documentation**: 
+3. **Documentation**:
    - README with complexity analysis table
    - Docstrings with examples and Big-O notation
    - Pattern guide (when to use which algorithm/data structure)
-4. **Problem Solutions**: At least 30 problems from ProblemBank_DSA.md with:
+4. **Problem Solutions**: At least 28 problems from ProblemBank_DSA.md with:
    - Multiple approaches (brute force → optimized)
    - Complexity analysis
    - Pattern identification
@@ -98,22 +100,20 @@ Build a comprehensive algorithm library with:
 
 **Acceptance criteria:**
 - All implementations tested and working
-- 30+ DSA problems solved with tests
+- 28+ DSA problems solved with tests
 - Complexity documented for each solution
 - Pattern guide clear and useful
 - Code quality tools pass
 
-### Suggested problems (30-40 total for the week)
+### Suggested problems (25-35 total for the week)
 - See `intern_training/ProblemBank_DSA.md` (Core/Stretch/Challenge)
-- Daily quota: 5-8 problems
+- Daily quota varies by section size (4-8 per day) — see each day's plan above
 - Focus on understanding patterns, not just solving
 
 ### Promotion gate (advance to Week 4 if all met)
-- 30+ DSA problems solved with comprehensive tests
+- 28+ DSA problems solved with comprehensive tests
 - Algorithm implementations correct and tested
 - Complexity analysis documented and accurate
 - Pattern recognition demonstrated
 - Quality gates pass (`black`, `isort`, `pylint`)
 - Weekend assignment complete with all acceptance criteria
-
-

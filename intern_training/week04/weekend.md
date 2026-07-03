@@ -57,16 +57,13 @@ python -m pipeline transform --input data.csv --output clean.json --config confi
 # Load to database
 python -m pipeline load --input clean.json --db pipeline.db
 
-# Full pipeline
-python -m pipeline run --config config.yaml --verbose
-
 # Generate report
 python -m pipeline report --db pipeline.db --format table
 ```
 
 Features required:
-- **Subcommands**: validate, transform, load, run, report
-- **Arguments**: `--source`, `--output`, `--config`, `--verbose`, `--dry-run`
+- **Subcommands**: validate, transform, load, report
+- **Arguments**: `--source`, `--output`, `--config`, `--verbose`
 - **Help text**: Comprehensive `--help` for each subcommand
 - **Exit codes**: 0 (success), 1 (error), 2 (usage error)
 - **Progress**: Show progress for long operations
@@ -75,14 +72,13 @@ Features required:
 
 #### 5. Comprehensive Testing
 Test suite must include:
-- **Unit Tests** (>90% coverage):
+- **Unit Tests** (>85% coverage):
   - Each extractor
   - Each validator
   - Each transformer
   - Each loader
   - CLI argument parsing
-- **Comprehensive Unit Tests** (>90% coverage):
-  - Each component tested separately
+- **Integration Tests**:
   - End-to-end test with temp database and files
   - Error scenarios covered
   - Rollback on database failure tested
@@ -185,7 +181,7 @@ week04/
   - [ ] Database rollback on failure
   - [ ] Retry logic for API calls
 - [ ] **Testing**:
-  - [ ] Test coverage >90%
+  - [ ] Test coverage >85%
   - [ ] Unit tests for all components
   - [ ] End-to-end pipeline test with temp database
   - [ ] Mocked external dependencies
@@ -199,13 +195,13 @@ week04/
   - [ ] Passes `black`, `isort`, `pylint`
   - [ ] Type hints throughout
   - [ ] No security issues (secrets in env, not code)
-- [ ] **Problem Solving**: 15+ problems from ProblemBank_DataHandling.md
+- [ ] **Problem Solving**: 12+ problems from ProblemBank_DataHandling.md
 
 ### Promotion Gate
 To advance to Week 5 (Django), you must:
 - ✅ Meet all acceptance criteria above
 - ✅ Pipeline processes real data end-to-end
-- ✅ Tests pass with >90% coverage
+- ✅ Tests pass with >85% coverage
 - ✅ CLI is professional and user-friendly
 - ✅ Documentation is comprehensive
 - ✅ Code quality tools pass

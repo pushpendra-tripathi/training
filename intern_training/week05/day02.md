@@ -34,7 +34,7 @@ Views are the core of Django applications. Understanding FBVs vs CBVs, URL routi
    - URL parameters: `<int:pk>`, `<slug:slug>`
 
 3) Class-Based Views (CBVs)
-   - ListView: display all tasks with pagination
+   - ListView: display all tasks with basic pagination (`paginate_by`) — Week 6 Day 3 deepens this with search/filter state preserved across pages
    - DetailView: display single task
    - CreateView: form to create task
    - UpdateView: form to edit task
@@ -72,7 +72,7 @@ Views are the core of Django applications. Understanding FBVs vs CBVs, URL routi
 - [ ] reverse() used in code
 - [ ] 3+ view problems solved
 - [ ] Code passes quality tools
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

@@ -23,7 +23,7 @@ Modern Django apps often use separate frontends. Understanding API consumption, 
 1) Static Frontend Setup
    - Use provided `frontend_template/` as base
    - Serve with Django static files or separate server
-   - Structure: index.html, app.js, api.js, ui.js, styles.css
+   - Structure: index.html, styles.css, js/api.js, js/ui.js, js/app.js
 
 2) API Client (api.js)
    - Fetch tasks: GET /api/tasks/
@@ -90,7 +90,7 @@ Modern Django apps often use separate frontends. Understanding API consumption, 
 - [ ] CSRF tokens handled
 - [ ] E2E checklist completed
 - [ ] Code passes quality tools
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

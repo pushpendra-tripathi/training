@@ -16,7 +16,7 @@ This programme is built on **first principles thinking**: clarity before action,
 **Definition of Success**:
 - **Not**: Someone who has "completed exercises"
 - **Not**: Someone who has "learned Django"
-- **Yes**: Someone who can **independently build, test, and deploy** a production-quality Django application
+- **Yes**: Someone who can **independently build, test, and integrate** a production-quality full-stack Django application
 - **Yes**: Someone who can **join a development team** and contribute from day one
 
 **Constraints**:
@@ -57,7 +57,7 @@ This programme is built on **first principles thinking**: clarity before action,
 
 **Definition of Success**:
 - Write comprehensive unit tests (>85% coverage)
-- Build validated data pipelines
+- Design normalized database schemas (SQL, constraints, indexes) and build validated ETL pipelines
 - Profile and optimize code
 - Create professional CLIs
 
@@ -69,9 +69,9 @@ This programme is built on **first principles thinking**: clarity before action,
 **Definition of Success**:
 - Build complete CRUD applications
 - Implement authentication and authorization
-- Create REST APIs
+- Create REST APIs with Django REST Framework
+- Integrate a frontend with the API
 - Test Django code properly
-- Deploy production-ready apps
 
 **Why This Last**: Framework learning is fastest when fundamentals are solid.
 
@@ -156,7 +156,7 @@ Each week's gate answers: **Are you ready for the next level of complexity?**
 ### Week 1 → 2 Gate: "Can you write production Python?"
 - ✅ Code passes quality tools (black, isort, pylint)
 - ✅ Functions have type hints and docstrings
-- ✅ 25+ problems solved with tests
+- ✅ 20+ problems solved with tests
 - ✅ CLI works on sample data
 - ✅ Can explain code decisions
 
@@ -165,14 +165,14 @@ Each week's gate answers: **Are you ready for the next level of complexity?**
 ### Week 2 → 3 Gate: "Can you design with OOP?"
 - ✅ Classes use proper encapsulation
 - ✅ Composition over inheritance applied
-- ✅ 20+ OOP problems solved
+- ✅ 15+ OOP problems solved
 - ✅ Tests cover edge cases
 - ✅ Can explain design choices
 
 **If No**: OOP confusion will compound in Django. Clarify before proceeding.
 
 ### Week 3 → 4 Gate: "Can you think algorithmically?"
-- ✅ 30+ DSA problems solved
+- ✅ 25+ DSA problems solved
 - ✅ Complexity analysis documented
 - ✅ Patterns recognized and applied
 - ✅ Can optimize brute-force solutions

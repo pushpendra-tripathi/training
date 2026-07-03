@@ -8,7 +8,7 @@ A comprehensive pytest test suite with fixtures, parametrization, mocking, and p
 Django projects rely heavily on testing. Mastering pytest fixtures, mocking, and parametrization is essential for building maintainable Django test suites that catch bugs before production.
 
 **What does success look like?**  
-- Test suite with >90% coverage
+- Test suite with >85% coverage
 - Fixtures reducing test code duplication
 - Mocked external dependencies (no real file/network I/O in tests)
 
@@ -17,7 +17,7 @@ Django projects rely heavily on testing. Mastering pytest fixtures, mocking, and
 ### Objectives
 - Master pytest fixtures, parametrization, and mocking
 - Learn property-based testing with hypothesis
-- Build comprehensive test suites with >90% coverage
+- Build comprehensive test suites with >85% coverage
 
 ### Tasks
 1) pytest Fundamentals Review
@@ -68,7 +68,7 @@ Django projects rely heavily on testing. Mastering pytest fixtures, mocking, and
 
 ### Deliverables
 - Comprehensive test suite for Week 1-2 code:
-  - >90% coverage
+  - >85% coverage
   - Fixtures documented
   - Parametrized tests for edge cases
   - Mocked file/network operations
@@ -77,13 +77,13 @@ Django projects rely heavily on testing. Mastering pytest fixtures, mocking, and
 - `Makefile` with `test`, `coverage` targets
 
 ### Submission checklist
-- [ ] Test suite with >90% coverage
+- [ ] Test suite with >85% coverage
 - [ ] Fixtures used appropriately
 - [ ] At least 3 parametrized test functions
 - [ ] At least 2 mocked dependencies
 - [ ] Property-based test example
 - [ ] Code passes `black .`, `isort .`, `pylint **/*.py`
-- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../../DAILY_TEMPLATE.md)):
+- [ ] **Daily reflection completed** (see [DAILY_TEMPLATE.md](../DAILY_TEMPLATE.md)):
   - [ ] Problem definition answered before coding
   - [ ] Can explain why today's work matters for Django
   - [ ] Documented patterns learned and when to apply them

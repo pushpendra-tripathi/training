@@ -20,7 +20,7 @@
   - QuerySets: filter, get, all, order_by
 - Hands-on
   - Create `tasktracker` project and `tasks` app
-  - Define `Task` model with title, description, status, due_date, created_at
+  - Define `Task` model with title, description, status, priority, due_date, created_at, updated_at
   - Create and run migrations
   - Django shell: practice QuerySet operations
   - Solve 3-4 model problems from ProblemBank_Django.md
@@ -60,12 +60,12 @@
   - Add template includes for reusable components
   - Solve 2-3 template problems from ProblemBank_Django.md
 - Problem solving
-  - Core: Template inheritance system, Custom template tags
-  - Stretch: Template with context processors
+  - Core: Template inheritance system
+  - Stretch: Custom template tags, Template with context processors
 - Deliverables
   - Template system working; base + extends pattern; partials extracted; custom filter added
 
-#### Day 4 (Thu): Forms & Validation + Admin
+#### Day 4 (Thu): Forms, Validation & Admin
 - Topics
   - ModelForm: Meta class, fields, widgets
   - Form validation: clean methods, field validators
@@ -79,8 +79,8 @@
   - Add custom admin action (bulk status change)
   - Solve 3-4 form/admin problems from ProblemBank_Django.md
 - Problem solving
-  - Core: ModelForm with custom validation, Form with multiple models
-  - Stretch: Custom admin configuration, Inline admin
+  - Core: ModelForm with custom validation, Custom admin configuration
+  - Stretch: Form with multiple models, Inline admin
 - Deliverables
   - Forms working with validation; messages displaying; admin configured and useful
 
@@ -110,12 +110,12 @@ Build a production-quality Django CRUD app:
 1. **Models**:
    - Task model with validations
    - At least one related model (e.g., Category, Tag)
-   - Custom manager for published/archived tasks
+   - Custom manager: `completed_tasks`, `pending_tasks` (based on status)
 2. **Views**:
    - Full CRUD using CBVs
-   - List with pagination (10 per page)
+   - List with basic pagination (10 per page) — search/filter state preservation across pages is deepened in Week 6
    - Search by title
-   - Filter by status
+   - Filter by status and priority
 3. **Templates**:
    - Base template with navigation
    - List, detail, create, update, delete templates
