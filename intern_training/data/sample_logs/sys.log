@@ -1,0 +1,5 @@
+Oct  1 09:00:00 host kernel: [0.000000] Booting Linux version 6.1.0
+Oct  1 09:05:12 host CRON[1234]: (root) CMD (/usr/local/bin/cleanup)
+Oct  1 09:10:27 host systemd[1]: Started gunicorn.service
+Oct  1 10:00:00 host systemd[1]: logrotate.service: Succeeded.
+
