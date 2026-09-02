@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 88
+target-version = ['py310','py311','py312','py313','py314']
+include = '\.pyi?$'
+force-exclude = '''
+\.eggs
+| \.git
+| \.hg
+| \.mypy_cache
+| \.tox
+| \.venv
+| _build
+| buck-out
+| build
+| dist
+
+'''
