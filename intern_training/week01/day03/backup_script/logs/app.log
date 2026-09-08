@@ -1,0 +1,16 @@
+2025-10-01 09:00:01 INFO User login succeeded user_id=123
+2025-10-01 09:05:12 WARN Slow request path=/api/tasks duration_ms=912
+2025-10-01 09:10:27 ERROR Failed to save task id=77 reason=ValidationError
+2025-10-01 10:00:00 INFO Daily job executed name=archive_logs
+
+2026-09-03 13:31:13 [INFO] backup created for f1
+2026-09-03 13:31:13 [INFO] backup created for f2
+2026-09-03 13:31:13 [INFO] backup created for f3
+2026-09-03 13:31:13 [INFO] backup created for f4
+2026-09-03 13:31:13 [INFO] removinr f1-2026-09-03.tar.gz from archives
+2026-09-03 13:31:44 [INFO] backup created for f1
+2026-09-03 13:31:44 [INFO] backup created for f2
+2026-09-03 13:31:44 [INFO] backup created for f3
+2026-09-03 13:31:44 [INFO] backup created for f4
+2026-09-03 13:31:44 [INFO] removinr f1-2026-09-03.tar.gz from archives
+2026-09-03 15:05:49 [INFO] backup created for app.log
