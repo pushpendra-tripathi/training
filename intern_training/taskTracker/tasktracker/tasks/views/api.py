@@ -50,7 +50,6 @@ def taskDetailApiView(request, pk):
     authentication_classes = {SessionAuthentication}
     permission_classes = [
         permissions.IsAuthenticatedOrReadOnly,
-        permissions.IsAuthenticated,
     ]
     paginator = PageNumberPagination()
     paginator.page_size = 5
@@ -59,7 +58,7 @@ def taskDetailApiView(request, pk):
     except task.DoesNotExist:
         return HttpResponse(status=404)
 
-    if st.method == "GET":
+    if request.method == "GET":
         tasks = Task.objects.filter(owner=request.user).order_by("-created_at")
         if request.user.is_superuser:
             tasks = Task.objects.all()
