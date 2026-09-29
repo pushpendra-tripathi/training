@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="welcome">
+        <h1>Welcome</h1>
+        <h1>to</h1>
+        <h1>Tasktracker app</h1>
+    </div>
+{% endblock %}

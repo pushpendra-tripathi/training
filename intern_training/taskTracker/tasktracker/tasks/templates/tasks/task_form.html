@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    {% if form.errors %}
+    {% comment %} {% if messages %}
+            <ul class="error messages">
+                {% for message in messages %}
+                    <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                {% endfor %}
+            </ul>
+        {% endif %} {% endcomment %}
+        {% for field,error in form.errors.items %}
+            <div class="error_display">
+                <p>{{field}}: </p>
+                <p>{{error}}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <form method='post' action='' class='task form'>
+            {%csrf_token %}
+            {{ form }}
+            <div class = 'action_buttons'>
+                <button type = 'submit'>submit</button>
+                <a href="{% url 'tasks:tasks_list' %}">cancel</a>
+            </div>
+        </form>
+    {% endif %}
+{% endblock %}

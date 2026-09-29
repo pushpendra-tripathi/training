@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href='{% static 'tasks/style.css' %}'>
+{% endblock %}
+
+{% block content%}
+    <div class = 'task_list'>
+        {% comment %}
+            {% if messages %}
+                <ul class="success messages">
+                    {% for message in messages %}
+                        <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endcomment %}
+        {% if form.errors %}
+
+           {{form.errors}}
+
+        {%endif%}
+
+        {% for page in pages %}
+            <li class='task'>
+                <p class = 'task_title'>
+                    <strong>
+                        {{page.title|truncatewords:2}}
+                    </strong>
+                </p>
+                <p> -By {{page.owner|title}} on  {{page.created_at|date:'M, d Y'}} </p>
+                <div class = 'edit_tools'>
+                    {% load status_badge %}
+                    <p>{{page.status|badge}}</p>
+                    <a class = 'delete_task' href="{% url 'tasks:task_details' page.pk %}"> 🛈 </a>
+                    <a class = 'update_task' href="{% url 'tasks:update_task' page.pk %}"> ✏️ </a>
+                    <a class = 'delete_task' href="{% url 'tasks:delete_task' page.pk %}"> &#10060;</a>
+                </div>
+            </li>
+        {% endfor %}
+
+    </div>
+
+    <div class='paginator'>
+    <div>
+        {% if pages.has_previous %}
+            <a href="?page={{pages.previous_page_number}}"> <strong> << </strong> </a>
+        {% endif %}
+    </div>
+    <div>
+        {% for i in pages.paginator.page_range %}
+            {% if i == pages.number %}
+                <strong>{{i}}</strong>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div>
+
+        {% if pages.has_next %}
+            <a href="?page={{pages.next_page_number}}"> <strong> >> </strong> </a>
+        {% endif %}
+    </div>
+    </div>
+
+
+{% endblock %}

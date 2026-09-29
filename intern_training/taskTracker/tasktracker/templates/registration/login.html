@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+<h2>Log In</h2>
+
+{% block content %}
+<form method='post' class='login_form'>
+    {% csrf_token %}
+    {{form}}
+    <div class = 'login_form_buttons'>
+        <button type='submit'>Log In</button>
+        <button disabled><a href="{% url 'tasks:user_register'%}">Register</a></button>
+    </div>
+</form>
+{% endblock %}

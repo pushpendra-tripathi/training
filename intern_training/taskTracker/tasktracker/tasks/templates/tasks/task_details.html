@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'tasks/style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="task_detail">
+        <p>Title : {{task.title}}</p>
+        <p>Description : {{task.description}}</p>
+        <p>Todo : {{task.status}}</p>
+        <p>Due_date : {{task.due_date}}</p>
+    </div>
+{% endblock %}

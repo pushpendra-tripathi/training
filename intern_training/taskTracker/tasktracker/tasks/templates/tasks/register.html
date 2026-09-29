@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% load static %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'tasks/style.css' %}" />
+{% endblock %} {% block content%}
+{% if form.errors %}
+    {% for field,error in form.errors.items %}
+        <div class="error_display">
+            <p>{{field}}: </p>
+            <p>{{error}}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <form action="" method="post" class="register_form">
+    {% csrf_token %}
+
+        {{form}}
+        <button type="submit">submit</button>
+    </form>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css%}
+    <link rel="stylesheet" href='{% static 'tasks/style.css' %}'>
+{% endblock %}
+
+{% block content %}
+    <form action = '' method = 'post' class = 'confirmation'>
+        {% csrf_token %}
+        <p>Are you sure you want to delete this task </p>
+        <div class='delete_info'>
+        {
+        <p>
+            title: {{task.title}}
+        </p>
+        <p>
+            description: {{task.description}}
+        </p>
+        <p>
+            due_date: {{task.due_date}}
+        </p>
+        }
+        </div>
+        <div class="action_buttons">
+            <input type="submit" value='confirm'>
+            <a href="{% url 'tasks:tasks_list' %}">cancel</a>
+        </div>
+    </form>
+{% endblock %}

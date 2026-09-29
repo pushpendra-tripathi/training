@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="darkreader-lock">
+	<title>{% block title %}Task Tracker {% endblock %}</title>
+	<link rel="stylesheet" href="{% static 'css/global.css' %}">
+    {% block extra_css %} {% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <a href={% url 'tasks:Home' %}>Home</a>
+            <a href={% url 'tasks:tasks_list' %}>Task list</a>
+            <a href={% url 'tasks:create_task'%}>Add task</a>
+            <a href={% url 'tasks:about' %}>About</a>
+            {% if user.is_authenticated %}
+                <form action="{% url 'logout' %}" method='post'>
+                    {% csrf_token %}
+                    <button type='submit' id='logout_button'>Logout</button>
+                </form>
+            {%else%}
+                <a href="{% url 'login' %}">login</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main>
+        <section class="messages_section">
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </section>
+        <section>
+            {% block content%}
+                hello
+            {% endblock %}
+        </section>
+    </main>
+    <footer>&copy Demo 2026</footer>
+</body>
+</html>
